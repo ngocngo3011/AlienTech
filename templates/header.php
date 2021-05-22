@@ -27,29 +27,17 @@
   <!-- ------------ AOS Library ------------------------- -->
   <link rel="stylesheet" href="./assets/css/aos.css">
 
+  <!-- Custom Style   -->
+  <link rel="stylesheet" href="./assets/css/TrangChu.style.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 
-<?php 
-    // if(isset($_GET['controller'])){
-    //     $controller = $_GET['controller'];
-        
-    //     if($controller === 'CartPageProductController'){    
-    //             echo'<link href="./assets/css/GioHang_CSS.css" rel="stylesheet">';
-    //     }
-    //     else if ($controller === 'FilterPageController'){
-    //             echo'<link href="./assets/css/style-alllaptop.css" rel="stylesheet">';
-    //     }
-    // }
-    // else{
-    //     echo'<link href="./assets/css/TrangChu.Style.css" rel="stylesheet">';
-    // }
-?>
+
+
+
+
 
 </head>
-
-
-
 
 
 
