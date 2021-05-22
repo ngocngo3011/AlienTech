@@ -1,6 +1,8 @@
+<!-- <link rel="stylesheet" href="./assets/css/Detailed_Product.css"> -->
+
 <!-- B: Content Container--> 
 <div class="container">
-<div class="card">
+<div class="card" style="background-color: white">
 <div class ="container-fluid">
  	
 <!-- I: col12 - Giới thiệu sản phẩm-->
@@ -8,15 +10,15 @@
 	<!-- I.1.1: col6 - Hình ảnh sản phẩm: Fullsize + thumnails--> 
     <div class="col-md-6 ">
   		<div class="preview-pic tab-content">
-   			 <div class ="tab-pane active" id="pic" > <img src="../img/mac_pic.jpg" alt ="">
+   			 <div class ="tab-pane active" id="pic" > <img src="./assets/img/mac_pic.jpg" alt ="">
    			 </div>
-			 <div class="tab-pane" id="pic_1"><img src="../img/mac_pic1.jpg" alt="Anh san pham 1">
+			 <div class="tab-pane" id="pic_1"><img src="./assets/img/mac_pic1.jpg" alt="Anh san pham 1">
 			 </div> 
-			 <div class="tab-pane" id="pic_2"><img src="../img/mac_pic2.jpg" alt="Anh san pham 2">
+			 <div class="tab-pane" id="pic_2"><img src="./assets/img/mac_pic2.jpg" alt="Anh san pham 2">
 			 </div> 
-			 <div class="tab-pane" id="pic_3"> <img src="../img/mac_pic6 (2).jpg" alt="Anh san pham 3">
+			 <div class="tab-pane" id="pic_3"> <img src="./assets/img/mac_pic6 (2).jpg" alt="Anh san pham 3">
 			 </div> 
-			 <div class="tab-pane" id="pic_4"><img src="../img/mac_pic3.png" alt="Anh san pham 4">
+			 <div class="tab-pane" id="pic_4"><img src="./assets/img/mac_pic3.png" alt="Anh san pham 4">
       		</div> 
       	</div>
       	<br> 
@@ -28,11 +30,11 @@
 			  </li> 
 			  <li class="active"><a data-target="#pic_1" data-toggle="tab"><img src="../img/mac_pic1.jpg" alt=""></a>
 			  </li> 
-			  <li><a data-target="#pic_2" data-toggle="tab"><img src="../img/mac_pic2.jpg" alt=""></a>
+			  <li><a data-target="#pic_2" data-toggle="tab"><img src="./assets/img/mac_pic2.jpg" alt=""></a>
 			  </li> 
-			  <li><a data-target="#pic_3" data-toggle="tab"><img src="../img/mac_pic6 (2).jpg" alt=""></a>
+			  <li><a data-target="#pic_3" data-toggle="tab"><img src="./assets/img/mac_pic6 (2).jpg" alt=""></a>
 			  </li> 
-			  <li><a data-target="#pic_4" data-toggle="tab"><img src="../img/mac_pic3.png" alt=""></a>
+			  <li><a data-target="#pic_4" data-toggle="tab"><img src="./assets/img/mac_pic3.png" alt=""></a>
 			  </li> 
 		 </ul>
 		 </div> 

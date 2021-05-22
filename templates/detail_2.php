@@ -1,3 +1,5 @@
+<!-- <link rel="stylesheet" href="./assets/css/Detailed_Product.css"> -->
+
 <!-- II: col12 - Thông tin sản phẩm--> 
  	<!-- II.1: Tab bar của sản phẩm--> 
  	<div class="span9" id="Tabbar" >

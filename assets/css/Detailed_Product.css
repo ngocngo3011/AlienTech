@@ -137,7 +137,7 @@ input::-webkit-input-placeholder {
 
 /* CSS PRODUCT DETAIL*/
 #thongtinsanpham{
-	background-color:cornsilk;
+	background-color:white;
 	border-radius: 10px;
 	padding:10px;
 }
@@ -200,7 +200,7 @@ animation-duration: .3s;
  
 .card { 
 margin-top: 0px;    
-background: #eee;   
+background: white;   
 padding: 0em;   
 line-height: 1.5em;
 } 
@@ -258,11 +258,7 @@ background-color: red;
 border-radius: 25px;
 }
 
-.add-to-cart:hover{
-background-color: darkgreen;
-transition: background-color 1s;
-text-decoration:none;
-}
+
 
 .sub_content li:hover{
 	color:red;
@@ -279,33 +275,21 @@ text-decoration:none;
 #store_option p:hover{
 	color:red;
 }
-.add-to-cart:active{
-background-color: black;
-	text-decoration: none;
-}
- 
+
 .not-available {    
 text-align: center; 
 line-height: 2em;
 }
  
-.not-available:before { 
+.not-available::before { 
 font-family: fontawesome;   
 content: "\f00d";   
 color: #fff;
 }
  
-.color_grey {   
-background-color: grey;
-}
+
  
-.color_silver {    
-background-color: silver;
-}
- 
-.color_yellow { 
-background-color: goldenrod;
-}
+
 
 .option {
 padding: 10px;
@@ -321,19 +305,11 @@ border-radius: 10px;
     border: 1px solid #d8d8d8;
 	padding: 18px 12px;}
 
-textarea{
-    display: block;
-    width: 100%;
-    height: auto;
-    background-color: #fff;
-}
 tooltip-inner {    
 padding: 1.3em;
 } 
 
-.text-left col-sm-4{
-background-color:antiquewhite;
-}
+
 
 #myTab{
 background-color: aliceblue;

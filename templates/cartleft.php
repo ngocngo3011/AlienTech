@@ -1,3 +1,5 @@
+<link href="./assets/css/GioHang_CSS.css" rel="stylesheet">
+
 <!-- body trang giỏ hàng	-->
 	<div class="mt-2 GioHang">
 		<div class="container" style="padding-left: 0px"> <!-- Chỉnh CSS -->

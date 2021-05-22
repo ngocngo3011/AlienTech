@@ -1,3 +1,6 @@
+  <link rel="stylesheet" href="./assets/css/TrangChu.Style.css">
+<link rel="stylesheet" href="./assets/css/style-alllaptop.css">
+
 <?php
 
 require_once('./templates/header.php');

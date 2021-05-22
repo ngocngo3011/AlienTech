@@ -1,4 +1,4 @@
-  <div class="col-md-9 p-0 ">
+<div class="col-md-9 p-0 ">
               <div class="container-fluid tab-content" id="myTabContent">
 
                   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -7,7 +7,7 @@
 
                           <?php foreach ($data['filterProducts'] as $product) { ?>
 
-                              <div class="col-md-3 col-6 tovar_wrapper p-0" data-appear-top-offset='-100' data-animated='fadeInUp'>
+                              <div class="col-md-4 col-6 tovar_wrapper p-0" data-appear-top-offset='-100' data-animated='fadeInUp'>
                                   <div class="card  tovar_item padbot40 filter ">
                                       <div class="tovar_img">
                                           <div class="tovar_img_wrapper">
@@ -62,4 +62,7 @@
                    </div>
                  </div>
 
-                    
+                    </div>
+                     </div>
+
+                    </div>

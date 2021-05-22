@@ -1,3 +1,5 @@
+<link href="./assets/css/GioHang_CSS.css" rel="stylesheet">
+
 <!-- Cột hiển thị tiền, PP mua hàng -->
 		<div class="col-xl-3 p-0">
 <!--			Khuyến mãi/Tổng tiền		-->

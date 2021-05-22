@@ -1,3 +1,6 @@
+
+<link rel="stylesheet" href="./assets/css/GioHang_CSS.css">
+  <link rel="stylesheet" href="./assets/css/TrangChu.Style.css">
 <?php
 
 require_once('./templates/header.php');

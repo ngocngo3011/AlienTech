@@ -53,6 +53,20 @@ require_once("./core/Model.php");
 				$mainPicture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:"/assets/img/Missing_Image.jpg"; 
 				$product->mainPicture = $mainPicture;
 
+				//Lay hinh anh slider
+				// $productId = $resultSetProduct[$i]->id_sanpham;
+				// $queryPicture = "SELECT *
+				// 			FROM tbl_hinhanh ha 
+				// 			WHERE id_sanpham = '$productId' 
+				// 			and id_sanpham = 'slider01' ";
+
+				// $stmt = $this->db->prepare($queryPicture);
+				// $stmt->execute();
+				// $resultObject = $stmt->fetchObject();
+				// $sliderPicture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:"/assets/img/Missing_Image.jpg"; 
+				// $product->sliderPicture = $sliderPicture;
+				// }
+
 				// CHI LAY THONG SO RAM VA O DIA O LAPTOP VA PC
 				if($product->categoryType == "LSP001" || $product->categoryType == "LSP002"){
 					//Lay thong so RAM
@@ -100,6 +114,7 @@ require_once("./core/Model.php");
 
 			return $products;
 		}
+
 
 		// HAM TIM RA NHUNG SAN PHAM DANG MUA
 		// SAN PHAM DANG MUA LA NHUNG SAN PHAM DUOC GIAM GIA > 2O%
@@ -152,5 +167,71 @@ require_once("./core/Model.php");
 			}
 			return $products;
 
+		}
+
+
+
+
+
+
+
+				public function getimg($limit, $category='LSP004', $brandId="") {
+			$query = "SELECT * 
+						FROM tbl_sanpham 
+						WHERE id_loaisanpham = '$category' ";
+			
+			if($brandId != "") {
+				$query.=" AND id_thuonghieu ='$brandId' ";
+			}
+			if($limit) {
+				$query.=' LIMIT '.$limit;
+			}
+
+			$stmt = $this->db->prepare($query);
+			$stmt->execute();
+			$resultSetProduct = $stmt->fetchAll(PDO::FETCH_CLASS);
+
+			$products = array();
+			for($i=0; $i<count($resultSetProduct);$i++){
+				$product = new BasicProduct();
+				$product->id = $resultSetProduct[$i]->id_sanpham;
+				$product->productName = $resultSetProduct[$i]->tensanpham;
+				$product->price = number_format($resultSetProduct[$i]->giaban);
+				$product->categoryType = $resultSetProduct[$i]->id_loaisanpham;
+				$product->salePrice = number_format($resultSetProduct[$i]->giagiam);
+				
+				//Lay hinh anh
+				$productId = $resultSetProduct[$i]->id_sanpham;
+				$queryPicture = "SELECT *
+							FROM tbl_hinhanh ha 
+							WHERE id_sanpham = '$productId' 
+								and ha.hinh_anh_chinh = 1";
+
+				$stmt = $this->db->prepare($queryPicture);
+				$stmt->execute();
+				$resultObject = $stmt->fetchObject();
+				$mainPicture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:"/assets/img/Missing_Image.jpg"; 
+				$product->mainPicture = $mainPicture;
+
+				//Lay hinh anh slider
+				$productId = $resultSetProduct[$i]->id_sanpham;
+				$queryPicture = "SELECT *
+							FROM tbl_hinhanh ha 
+							WHERE id_sanpham = '$productId' 
+							and id_sanpham = 'slider01' ";
+
+				$stmt = $this->db->prepare($queryPicture);
+				$stmt->execute();
+				$resultObject = $stmt->fetchObject();
+				$sliderPicture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:"/assets/img/Missing_Image.jpg"; 
+				$product->sliderPicture = $sliderPicture;
+				// }
+
+
+
+				array_push($products, $product);
+			}
+
+			return $products;
 		}
 	}

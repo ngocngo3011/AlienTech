@@ -1,3 +1,5 @@
+<link href="./assets/css/style-alllaptop.css" rel="stylesheet">
+
   <div class="container" style="margin-bottom: 10px">
       <div class="container-fluid breadcrumb1" style="padding: 0px">
           <nav aria-label="breadcrumb">
@@ -615,7 +617,7 @@
                       </div>
                   </div>
               </nav>
-          </div>
+      </form></div>
 
 
 
