@@ -11,6 +11,7 @@ class View {
 				${$key} = $_data;
 			}
 		}
+		
 		require_once('./views/' . $view .'.php');
 	}
 }
