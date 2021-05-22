@@ -248,6 +248,15 @@
      location.assign("./?controller=FilterPage&action=allLaptopProduct&brandId=TH010");
    }
 
+   function PCApple() {
+     location.assign("./?controller=FilterPage&action=allpcProduct&brandId=TH001");
+   }
+   function PCDell() {
+     location.assign("./?controller=FilterPage&action=allpcProduct&brandId=TH002");
+   }
+   function PCHP() {
+     location.assign("./?controller=FilterPage&action=allpcProduct&brandId=TH003");
+   }
 
 
 
