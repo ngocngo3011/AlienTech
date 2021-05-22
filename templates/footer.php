@@ -261,9 +261,7 @@
 
 
 
-   function trangtin() {
-     location.assign("./assets/HTML/Trang Tin.HTML");
-   }
+
  </script>
 
  <script>
