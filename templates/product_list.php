@@ -176,7 +176,7 @@
 <!----x---  Brand --x-->
 <div class="container padding">
     <div class="row padding">
-        <?php foreach ($data['pcProducts'] as $product) { ?>
+       <?php foreach ($data['pcProducts'] as $product) { ?>
             <div class="col-md-3 col-6 tovar_wrapper p-0" data-appear-top-offset='-100' data-animated='fadeInUp'>
                 <div class="card  tovar_item padbot40 filter ">
                     <div class="tovar_img">
@@ -185,10 +185,10 @@
                             <img class="card-img-top" src=".<?= $product->mainPicture ?>" alt="">
                             <div class="card-body">
                                 <p class="card-title text-center" style="font-weight: bold;"><?= $product->productName ?></p>
-                                <div class="props my-2">
+<!--                                 <div class="props my-2">
                                     <span class="dotted"><?= $product->ram ?></span>
                                     <span class="dotted"><?= $product->disk ?></span>
-                                </div>
+                                </div> -->
                                 <p class="special-price card-text text-danger my-2" style="font-weight: bold;display: inline;">
                                     <?= $product->salePrice ?> ₫</p>
                                 <p class="old-price" style="text-decoration: line-through;display: inline; font-size: 13px; color: gray;">
