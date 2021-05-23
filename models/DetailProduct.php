@@ -92,6 +92,14 @@ require_once("./models/BasicProduct.php");
 					// 		WHERE chsp.id_sanpham = '$productId';"
 
 
+// $stmt = $this->db->prepare($query);
+// 			$stmt->execute();
+// 			$resultSetProduct = $stmt->fetchAll(PDO::FETCH_CLASS);
+
+
+
+
+
 					$stmt = $this->db->prepare($queryTSSP);
 					$stmt->execute();
 					$productAttributes = array();

@@ -22,16 +22,11 @@
 		  	<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
 
 
-				
-
-<?php ($data['detailProduct']-> $product) { ?>
-		  		<br>
+				<br>
 				<p> 
 				<?= $product->mota ?> 
 				</p>
-
-<?php } ?>
-
+				 <?= $data['detailProduct']->productName ?>
 
 
 

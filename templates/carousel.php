@@ -21,7 +21,7 @@
                                 <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
                                     <img class="cpslazy loaded mt-3 ml-3" data-src="./assets/img/sale.gif" data-ll-status="loaded" src="./assets/img/sale.gif" style="width: 60px">
                                     <!-- get img của product -->
-                                    <img src=".<?= $product->mainPicture ?>" style="height: 180px; ">
+                                    <img src=".<?= $product->mainPicture ?>" style="height: 250px; ">
 
                                     <div class="blog-title">
                                         <!-- get name product -->

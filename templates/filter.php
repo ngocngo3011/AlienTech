@@ -5,7 +5,7 @@
           <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#" style=" color: #cc5801">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page"> Laptop</li>
+                  <li class="breadcrumb-item active" aria-current="page"> laptop</li>
               </ol>
           </nav>
       </div>
