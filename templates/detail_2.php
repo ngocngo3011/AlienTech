@@ -20,6 +20,22 @@
 	<div class="tab-content" id="myTabContent" >  
 	  		<!-- Nội dung tab 1: Mô tả chung--> 
 		  	<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
+
+
+				
+
+<?php ($data['detailProduct']-> $product) { ?>
+		  		<br>
+				<p> 
+				<?= $product->mota ?> 
+				</p>
+
+<?php } ?>
+
+
+
+
+
 				<br>
 				<p> <h4> Sản phẩm Macbook Air M1 2020 chính hãng VN/A </h4></p>
 				<p>Macbook Air M1 2020 là dòng sản phẩm có thiết kế mỏng nhẹ, sang trọng và tinh tế cùng với đó là giá thành phải chăng. Sản phẩm này thu hút được đông đảo người dùng yêu thích và lựa chọn.</p>
