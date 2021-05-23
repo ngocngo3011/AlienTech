@@ -10,6 +10,7 @@
 	<!-- I.1.1: col6 - Hình ảnh sản phẩm: Fullsize + thumnails--> 
     <div class="col-md-6 ">
   		<div class="preview-pic tab-content">
+
    			 <div class ="tab-pane active" id="pic" > <img src="./assets/img/mac_pic.jpg" alt ="">
    			 </div>
 			 <div class="tab-pane" id="pic_1"><img src="./assets/img/mac_pic1.jpg" alt="Anh san pham 1">
@@ -26,16 +27,11 @@
       	<div class="Detailed_Images">
       	  <br>
 		  <ul class="preview-thumbnail nav nav-tabs"> 
-			  <li class="active"><a data-target="#pic" data-toggle="tab"><img src="../img/mac_pic.jpg" alt=""></a>
+		  	<?php foreach ($data['pictureProduct'] as $product) { ?>
+      		 
+			  <li class="active"><a data-target="#pic" data-toggle="tab"><img src=".<?= $product->picture ?>" alt=""></a>
 			  </li> 
-			  <li class="active"><a data-target="#pic_1" data-toggle="tab"><img src="../img/mac_pic1.jpg" alt=""></a>
-			  </li> 
-			  <li><a data-target="#pic_2" data-toggle="tab"><img src="./assets/img/mac_pic2.jpg" alt=""></a>
-			  </li> 
-			  <li><a data-target="#pic_3" data-toggle="tab"><img src="./assets/img/mac_pic6 (2).jpg" alt=""></a>
-			  </li> 
-			  <li><a data-target="#pic_4" data-toggle="tab"><img src="./assets/img/mac_pic3.png" alt=""></a>
-			  </li> 
+			  <?php } ?>
 		 </ul>
 		 </div> 
 	 

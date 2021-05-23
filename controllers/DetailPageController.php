@@ -21,10 +21,12 @@ class DetailPageController
 
 		$detailProduct = $this->model->getDetailProduct($idProduct);
 		$relativeProducts = $this->model->getRelativeProducts($idProduct);
+		$pictureProduct = $this->model->getPicture($idProduct);
 
 		$data = array(
 			'detailProduct' => $detailProduct,
 			'relativeProducts' => $relativeProducts,
+			'pictureProduct'=> $pictureProduct,
 		);
 
 		$this->view->get('DetailPage', $data);

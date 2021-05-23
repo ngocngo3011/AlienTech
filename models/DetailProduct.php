@@ -147,6 +147,39 @@ require_once("./models/BasicProduct.php");
 			return $this;
 		}
 
+		// HÌNH ẢNH DETAIL
+		public function getPicture($ProductID='SP008') {
+			// TODO
+
+			$query = "SELECT * 
+						FROM tbl_hinhanh 
+						WHERE id_sanpham = '$ProductID' ";
+
+			$stmt = $this->db->prepare($query);
+			$stmt->execute();
+			$resultSetProduct = $stmt->fetchAll(PDO::FETCH_CLASS);
+
+			for($i=0; $i<count($resultSetProduct);$i++){
+				$product = new BasicProduct();
+				$product->id = $resultSetProduct[$i]->id_sanpham;
+
+			$products = array();
+			$productId = $resultSetProduct[$i]->id_sanpham;
+			$queryPicture = "SELECT hinhanh_url 
+							FROM tbl_hinhanh 
+							WHERE id_sanpham='productId' LIMIT 5";
+					
+					$stmt = $this->db->prepare($queryPicture);
+					$stmt->execute();
+					$resultObject = $stmt->fetchObject();
+					$picture = isset($resultObject->picture)?$resultObject->picture:""; 
+					$product->picture = $picture;
+			
+				array_push($products, $product);
+			}
+			return $products;
+		}
+
 		
 
 		public function getRelativeProducts($idProduct='SP008') {
