@@ -20,5 +20,4 @@ if($controller != ""){
 	$c->$action();
 }
 
-
 ?>
