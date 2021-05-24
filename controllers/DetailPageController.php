@@ -21,7 +21,7 @@ class DetailPageController
 
 		$detailProduct = $this->model->getDetailProduct($idProduct);
 		$relativeProducts = $this->model->getRelativeProducts($idProduct);
-
+    
 		$data = array(
 			'detailProduct' => $detailProduct,
 			'relativeProducts' => $relativeProducts,

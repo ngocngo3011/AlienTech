@@ -22,12 +22,6 @@
 		  	<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
 
 
-				<br>
-				<p> 
-				<?= $product->mota ?> 
-				</p>
-				 <?= $data['detailProduct']->productName ?>
-
 
 
 
@@ -57,62 +51,14 @@
 					<div class="sub_content">					  
 					<table class="table table-striped shop_attributes">	
 						<tbody>
+
+
+						
 							<tr class="">
-								<th>CPU</th>
-								<td>8 nhân với 4 nhân hiệu năng và 4 nhân tiết kiệm</td>
+								<th>CPU </th>
+								<td>8 </td>
 							</tr>		
-							<tr class="alt">
-								<th>RAM</th>
-								<td>8GB</td>
-							</tr>
-								<tr class="">
-								<th>Đĩa cứng</th>
-								<td>256GB SSD </td>
-							</tr>
-							<tr class="alt">
-								<th>Kích thước màn hình</th>
-								<td>13.3 inches</td>
-							</tr>
-							<tr class="">
-								<th>Xuất xứ</th>
-								<td>Trung Quốc</td>
-							</tr>
-							<tr class="alt">
-								<th>Trọng lượng</th>
-								<td>1.29kg</td>
-							</tr>
-							<tr class="">
-								<th>Loại card đồ họa</th>
-								<td>GPU 7 nhân, 16 nhân Neutral Engine </td>
-							</tr>
-							<tr class="alt">
-								<th>Độ phân giải màn hình </th>
-								<td>2500 x 1600 pixels (2K) </td>
-							</tr>
-							<tr class="">
-								<th>Cổng giao tiếp </th>
-								<td>2 cổng Thunder-bolth/ USB 4</td>
-							</tr>
-							<tr class="alt">
-								<th>Hệ điều hành</th>
-								<td>macOS Big Sur</td>
-							</tr>
-							<tr class="">
-								<th>Pin </th>
-								<td>49.9 watt-hour lithium-olymer, củ sạc công suất 30W </td>
-							</tr>
-							<tr class="alt">
-								<th>Wi-Fi</th>
-								<td>802.11ax Wi-Fi 6 wireless networking</td>
-							</tr>
-							<tr class="">
-								<th>Bluetooth </th>
-								<td>Bluetooth 5.0 </td>
-							</tr>
-							<tr class="alt">
-								<th>Tính năng đặc biệt</th>
-								<td>Ổ cứng SSD, Bảo mặt bân tay, Viền màn hình siêu mỏng</td>
-							</tr>
+							
 						</tbody>
 					</table>
 					</div>
