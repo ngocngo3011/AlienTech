@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Alien Tech</title>
+  <title>Trang chủ</title>
   <meta charset="utf-8">
   <!-- <link rel="stylesheet" type="text/css" href="assets/css/style-alllaptop.css"> -->
 
