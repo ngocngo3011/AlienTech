@@ -89,4 +89,122 @@ require_once("./models/BasicProduct.php");
 			return $this;
 		}
 
+
+				// HAM LAY NHUNG SAN PHAM DAI DIEN THEO DANH MUC[LAPTOP, PC, PHUKIEN]
+		public function getProducts($limit, $category='LSP001', $brandId="") {
+			$query = "SELECT * 
+						FROM tbl_sanpham 
+						WHERE id_loaisanpham = '$category' ";
+			
+			if($brandId != "") {
+				$query.= " AND id_thuonghieu = '$brandId' ";
+			}
+			if($limit) {
+				$query.=' LIMIT '.$limit;
+			}
+
+			$stmt = $this->db->prepare($query);
+			$stmt->execute();
+			$resultSetProduct = $stmt->fetchAll(PDO::FETCH_CLASS);
+
+			$products = array();
+			for($i=0; $i<count($resultSetProduct);$i++){
+				$product = new BasicProduct();
+				$product->id = $resultSetProduct[$i]->id_sanpham;
+				$product->productName = $resultSetProduct[$i]->tensanpham;
+				$product->price = number_format($resultSetProduct[$i]->giaban);
+				$product->categoryType = $resultSetProduct[$i]->id_loaisanpham;
+				$product->salePrice = number_format($resultSetProduct[$i]->giagiam);
+				$product->brandId = $resultSetProduct[$i]->id_thuonghieu;
+				
+				//Lay hinh anh
+				$productId = $resultSetProduct[$i]->id_sanpham;
+				$queryPicture = "SELECT *
+							FROM tbl_hinhanh ha 
+							WHERE id_sanpham = '$productId' 
+								and ha.hinh_anh_chinh = 1";
+
+				$stmt = $this->db->prepare($queryPicture);
+				$stmt->execute();
+				$resultObject = $stmt->fetchObject();
+				$mainPicture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:"/assets/img/Missing_Image.jpg"; 
+				$product->mainPicture = $mainPicture;
+
+				//Lay hinh anh slider
+				$productId = $resultSetProduct[$i]->id_sanpham;
+				$queryPicture = "SELECT *
+							FROM tbl_hinhanh ha 
+							WHERE id_sanpham = '$productId' 
+								and ha.hinh_anh_chinh = 2";
+
+				$stmt = $this->db->prepare($queryPicture);
+				$stmt->execute();
+				$resultObject = $stmt->fetchObject();
+				$sliderPicture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:"/assets/img/Missing_Image.jpg"; 
+				$product->sliderPicture = $sliderPicture;
+
+				//Lay hinh anh brand
+				$productId = $resultSetProduct[$i]->id_sanpham;
+				$queryPicture = "SELECT *
+							FROM tbl_hinhanh ha 
+							WHERE id_sanpham = '$productId' 
+								and ha.hinh_anh_chinh = 3";
+
+				$stmt = $this->db->prepare($queryPicture);
+				$stmt->execute();
+				$resultObject = $stmt->fetchObject();
+				$brandPicture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:""; 
+				$product->brandPicture = $brandPicture;
+
+
+				
+
+
+				// CHI LAY THONG SO RAM VA O DIA O LAPTOP 
+				if($product->categoryType == "LSP001" ){
+					//Lay thong so RAM
+					$queryRam = "SELECT id_thongso, giatri
+								FROM tbl_cauhinhsanpham chsp, tbl_thongsochitiet tsct 
+								WHERE id_sanpham = '$productId' 
+									and chsp.id_thongsochitiet = tsct.id_thongsochitiet
+									and tsct.id_thongso = 'TS004'";
+
+					$stmt = $this->db->prepare($queryRam);
+					$stmt->execute();
+					$resultObject = $stmt->fetchObject();
+					$ramValue = isset($resultObject->giatri)?$resultObject->giatri:"";
+					$product->ram = $ramValue;
+
+					//Lay thong so DISK
+					$queryDisk = "SELECT id_thongso, giatri
+									FROM tbl_cauhinhsanpham chsp, tbl_thongsochitiet tsct 
+									WHERE id_sanpham = '$productId' 
+										and chsp.id_thongsochitiet = tsct.id_thongsochitiet
+										and tsct.id_thongso = 'TS005'";
+
+					$stmt = $this->db->prepare($queryDisk);
+					$stmt->execute();
+					$resultObject = $stmt->fetchObject();
+					$diskValue = isset($resultObject->giatri)?$resultObject->giatri:"";
+
+					$product->disk = $diskValue;
+				}
+
+				// LAY THONG TIN RATING 
+				$queryRating = "SELECT COALESCE(ROUND(AVG(diem))) diemtrungbinh, COUNT(diem) luotdanhgia 
+								FROM tbl_danhgia 
+								WHERE id_sanpham = '$productId'";
+
+				$stmt = $this->db->prepare($queryRating);
+				$stmt->execute();
+				$resultObject = $stmt->fetchObject();
+				$product->rateNumbers = $resultObject->luotdanhgia;
+				$product->starNumbers = $resultObject->diemtrungbinh;
+
+
+				array_push($products, $product);
+			}
+
+			return $products;
+		}
 	}

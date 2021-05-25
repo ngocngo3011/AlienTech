@@ -22,6 +22,7 @@
 		  	<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
 
 -------------------------------------------------
+					
 
 		  	</div>
 		  	<!-- Nội dung tab 2: Thông số kỹ thuật--> 

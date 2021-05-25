@@ -35,7 +35,7 @@
                     <div class="tovar_img">
                         <div class="tovar_img_wrapper">
                             <!-- <label class="baohanh badge-warning" style="color: black; margin:10px; font-size: 12px;">Trả góp 0%</label> -->
-                            <img class="card-img-top" src=".<?= $product->mainPicture ?>" alt="">
+                            <img class="card-img-top" src=".<?=$product->mainPicture?>" alt="">
                             <div class="card-body">
                                 <p class="card-title text-center" style="font-weight: bold;"><?= $product->productName ?></p>
                                 <div class="props my-2">
@@ -61,8 +61,8 @@
                             </div>
                         </div>
                         <div class="tovar_item_btns">
-                            <div class="open-project-link"><a class="open-project tovar_view" href="?controller=DetailPage&action=index&idProduct=<?= $product->id ?>">Chi tiết</a></div>
-                            <a class="add_bag" href="?controller=CartPageProduct&action=index&idProduct=<?= $product->id ?>"><i class="fa fa-shopping-cart"></i></a>
+                            <div class="open-project-link"><a class="open-project tovar_view" href="./?controller=DetailPage&action=index&idProduct=<?=$product->id?>">Chi tiết</a></div>
+                            <a class="add_bag" href="./?controller=CartPageProduct&action=index&idProduct=<?=$product->id?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
 </div>
 
 <div class="row justify-content-center">
-    <a href="?controller=FilterPage&action=allLaptopProduct">
+    <a href="./?controller=FilterPage&action=allLaptopProduct">
         <p class="btn btn-outline-warning">Xem tất cả</p>
     </a>
 </div>
@@ -83,7 +83,7 @@
 <div class="container padding">
     <div class="row laptop mt-5">
         <div class="col-12">
-            <br>
+            
             <h3>
                 <img class="cpslazy loaded" data-src="./assets/img/flash.gif" data-ll-status="loaded" src="./assets/img/flash.gif" style="width: 20px">
                 <i style="color: #ef3f23;font-size: 25px;">MÁY TÍNH - PC</i>
@@ -109,19 +109,6 @@
 
 
 
-<!--         <div class="col px-1"><a href="./?controller=FilterPage&action=allpcProduct&brandId=TH001">
-            <button type="button" class="btn btn-light container-fluid" >
-                <img src="./assets/img/logo/apple_logo.png" width="50" height="50"></button>
-        </div></a>
-        <div class="col px-1"><a href="./?controller=FilterPage&action=allpcProduct&brandId=TH002">
-            <button type="button" class="btn btn-light container-fluid" >
-                <img src="./assets/img/logo/logo-dell.png" width="50" height="50"></button>
-        </div></a>
-        <div class="col px-1"><a href="./?controller=FilterPage&action=allpcProduct&brandId=TH003">
-            <button type="button" class="btn btn-light container-fluid" >
-                <img src="./assets/img/logo/hp-logo.png" width="50" height="50"></button>
-        </div></a> -->
-
     </div>
 </DIV>
 <!----x---  Brand --x-->
@@ -133,7 +120,7 @@
                     <div class="tovar_img">
                         <div class="tovar_img_wrapper">
                             <!-- <label class="baohanh badge-warning" style="color: black; margin:10px; font-size: 12px;">Trả góp 0%</label> -->
-                            <img class="card-img-top" src=".<?= $product->mainPicture ?>" alt="">
+                            <img class="card-img-top" src=".<?=$product->mainPicture?>" alt="">
                             <div class="card-body">
                                 <p class="card-title text-center" style="font-weight: bold;"><?= $product->productName ?></p>
 <!--                                 <div class="props my-2">
@@ -159,8 +146,8 @@
                             </div>
                         </div>
                         <div class="tovar_item_btns">
-                            <div class="open-project-link"><a class="open-project tovar_view" href="?controller=DetailPage&action=index&idProduct='<?= $product->id ?>">Chi tiết</a></div>
-                            <a class="add_bag" href="?controller=CartPageProduct&action=index&idProduct='<?= $product->id ?>"><i class="fa fa-shopping-cart"></i></a>
+                            <div class="open-project-link"><a class="open-project tovar_view" href="./?controller=DetailPage&action=index&idProduct='<?=$product->id?>">Chi tiết</a></div>
+                            <a class="add_bag" href="./?controller=CartPageProduct&action=index&idProduct='<?=$product->id?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -170,7 +157,7 @@
     </div>
 </div>
 <div class="row justify-content-center">
-    <a href="?controller=FilterPage&action=allPCProduct">
+    <a href="./?controller=FilterPage&action=allPCProduct">
         <p class="btn btn-outline-warning">Xem tất cả</p>
     </a>
 </div>
@@ -180,7 +167,7 @@
 <div class="container padding">
     <div class="row laptop mt-5">
         <div class="col-12">
-            <br>
+            
             <h3>
                 <img class="cpslazy loaded" data-src="./assets/img/flash.gif" data-ll-status="loaded" src="./assets/img/flash.gif" style="width: 20px">
                 <i style="color: #ef3f23;font-size: 25px;">PHỤ KIỆN</i>
@@ -220,8 +207,8 @@
                             </div>
                         </div>
                         <div class="tovar_item_btns">
-                            <div class="open-project-link"><a class="open-project tovar_view" href="?controller=DetailPage&action=index&idProduct=<?= $product->id ?>">Chi tiết</a></div>
-                            <a class="add_bag" href="?controller=CartPageProduct&action=index&idProduct='<?= $product->id ?>"><i class="fa fa-shopping-cart"></i></a>
+                            <div class="open-project-link"><a class="open-project tovar_view" href="./?controller=DetailPage&action=index&idProduct=<?=$product->id?>">Chi tiết</a></div>
+                            <a class="add_bag" href="./?controller=CartPageProduct&action=index&idProduct=<?=$product->id?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -232,7 +219,7 @@
 </div>
 
 <div class="row justify-content-center">
-    <a href="?controller=FilterPage&action=allAccessoryProduct">
+    <a href="./?controller=FilterPage&action=allAccessoryProduct">
         <p class="btn btn-outline-warning">Xem tất cả</p>
     </a>
 </div>

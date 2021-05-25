@@ -224,7 +224,9 @@
    function laptopAsus() {
      location.assign("./?controller=FilterPage&action=allLaptopProduct&brandId=TH004");
    }
-
+   function laptopLenovo() {
+     location.assign("./?controller=FilterPage&action=allLaptopProduct&brandId=TH005");
+   }
 
    function PCApple() {
      location.assign("./?controller=FilterPage&action=allpcProduct&brandId=TH001");
@@ -242,6 +244,9 @@
      location.assign("./?controller=FilterPage&action=allpcProduct&brandId=TH005");
    }
 
+   function addcart() {
+     location.assign("./?controller=CartPageProduct&action=index&idProduct=<?=$product->id?>");
+   }
 
 
 
