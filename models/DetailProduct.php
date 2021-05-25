@@ -16,7 +16,7 @@ require_once("./models/BasicProduct.php");
 		public $idthongso; 			
 		public $tenthongso; 		
 		public $giatri; 		
-
+		
 		// HAM GET CHI TIET THONG TIN SAN PHAM
 		public function getDetailProduct($idProduct) {
 			// TODO
@@ -96,6 +96,17 @@ require_once("./models/BasicProduct.php");
 
 			return $product;
 		}
+
+
+
+				
+
+
+
+
+
+
+
 		public function getPicture($idProduct) {
 			// TODO
 

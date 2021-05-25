@@ -24,9 +24,11 @@ class DetailPageController
     
 		$DetailProduct =  $this->model->getDetailProduct($idProduct);
 
+
 		$relatedLaptopProducts = $this->model->getProducts(4, "LSP001", "");
 		$allrelatedLaptopProducts = $this->model->getProducts(null, "LSP001", "");
 
+	
 
 		$MoreInformation = $this->model->getMoreInformation($idProduct);
 		$pictureProduct = $this->model->getPicture($idProduct);
