@@ -14,48 +14,15 @@
 <!--  Brand -->
 <DIV class="container d-none d-md-flex">
     <div class="row m-0">
-        <div class="col px-1">
-            <button type="button" class="btn btn-light container-fluid" onclick="laptopApple()">
-                <img src="./assets/img/logo/apple_logo.png" width="50" height="50"></button>
-        </div>
-        <div class="col px-1">
-            <button type="button" class="btn btn-light container-fluid" onclick="laptopDell()">
-                <img src="./assets/img/logo/logo-dell.png" width="50" height="50"></button>
-        </div>
+        <?php foreach ($data['brandPicture'] as $product) { ?>
 
-        <div class="col px-1">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopHP()">
-                    <img src="./assets/img/logo/hp-logo.png" width="50" height="50"></button>
-        </div>
-        <div class="col px-1">
-            <button type="button" class="btn btn-light container-fluid" onclick="laptopAsus()">
-                <img src="./assets/img/logo/Asus-logo.png" width="90" height="50"></button>
-        </div>
-        <div class="col px-1">
-            <button type="button" class="btn btn-light container-fluid" onclick="laptopLenovo()">
-                <img src="./assets/img/logo/lenovo-logo.png" width="90" height="50"></button>
-        </div>
+        <div class="col px-1"><a href="./?controller=FilterPage&action=allLaptopProduct&brandId=<?=$product->brandId?>">
+            <button type="button" class="btn btn-light container-fluid" >
+                <img src=".<?= $product->brandPicture ?>" width="50" height="50"></button>
+        </div></a>
 
-        <div class="col px-1">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopMicrosoft()">
-                    <img src="./assets/img/logo/Microsoft_logo.png" width="50" height="50"></button>
-        </div>
-        <div class="col px-1"><a href="index-alllg.html">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopLG()">
-                    <img src="./assets/img/logo/LG_Electronics.png" width="50" height="50"></button></a>
-        </div>
-        <div class="col px-1"><a href="index-allrazer.html">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopRazer()">
-                    <img src="./assets/img/logo/razer-logo.png" width="90" height="50"></button></a>
-        </div>
-        <div class="col px-1"><a href="index-allacer.html">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopAccer()">
-                    <img src="./assets/img/logo/acer.png" width="90" height="50"></button></a>
-        </div>
-        <div class="col px-1"><a href="index-allmsi.html">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopMsi()">
-                    <img src="./assets/img/logo/msi-logo.png" width="90" height="50"></button></a>
-        </div>
+         <?php } ?>
+
 
     </div>
 </DIV>
@@ -94,8 +61,8 @@
                             </div>
                         </div>
                         <div class="tovar_item_btns">
-                            <div class="open-project-link"><a class="open-project tovar_view" href="?controller=DetailPage&action=index&idProduct='<?= $product->id ?>">Chi tiết</a></div>
-                            <a class="add_bag" href="?controller=CartPageProduct&action=index&idProduct='<?= $product->id ?>"><i class="fa fa-shopping-cart"></i></a>
+                            <div class="open-project-link"><a class="open-project tovar_view" href="?controller=DetailPage&action=index&idProduct=<?= $product->id ?>">Chi tiết</a></div>
+                            <a class="add_bag" href="?controller=CartPageProduct&action=index&idProduct=<?= $product->id ?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -128,48 +95,32 @@
 <!--  Brand -->
 <DIV class="container d-none d-md-flex">
     <div class="row m-0">
-        <div class="col px-1">
-            <button type="button" class="btn btn-light container-fluid" onclick="laptopApple()">
+
+
+        <?php foreach ($data['brandPicture'] as $product) { ?>
+
+        <div class="col px-1"><a href="./?controller=FilterPage&action=allpcProduct&brandId=<?=$product->brandId?>">
+            <button type="button" class="btn btn-light container-fluid" >
+                <img src=".<?= $product->brandPicture ?>" width="50" height="50"></button>
+        </div></a>
+
+         <?php } ?>
+
+
+
+
+<!--         <div class="col px-1"><a href="./?controller=FilterPage&action=allpcProduct&brandId=TH001">
+            <button type="button" class="btn btn-light container-fluid" >
                 <img src="./assets/img/logo/apple_logo.png" width="50" height="50"></button>
-        </div>
-        <div class="col px-1">
-            <button type="button" class="btn btn-light container-fluid" onclick="laptopDell()">
+        </div></a>
+        <div class="col px-1"><a href="./?controller=FilterPage&action=allpcProduct&brandId=TH002">
+            <button type="button" class="btn btn-light container-fluid" >
                 <img src="./assets/img/logo/logo-dell.png" width="50" height="50"></button>
-        </div>
-
-        <div class="col px-1">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopHP()">
-                    <img src="./assets/img/logo/hp-logo.png" width="50" height="50"></button>
-        </div>
-        <div class="col px-1">
-            <button type="button" class="btn btn-light container-fluid" onclick="laptopAsus()">
-                <img src="./assets/img/logo/Asus-logo.png" width="90" height="50"></button>
-        </div>
-        <div class="col px-1">
-            <button type="button" class="btn btn-light container-fluid" onclick="laptopLenovo()">
-                <img src="./assets/img/logo/lenovo-logo.png" width="90" height="50"></button>
-        </div>
-
-        <div class="col px-1">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopMicrosoft()">
-                    <img src="./assets/img/logo/Microsoft_logo.png" width="50" height="50"></button>
-        </div>
-        <div class="col px-1"><a href="index-alllg.html">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopLG()">
-                    <img src="./assets/img/logo/LG_Electronics.png" width="50" height="50"></button></a>
-        </div>
-        <div class="col px-1"><a href="index-allrazer.html">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopRazer()">
-                    <img src="./assets/img/logo/razer-logo.png" width="90" height="50"></button></a>
-        </div>
-        <div class="col px-1"><a href="index-allacer.html">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopAccer()">
-                    <img src="./assets/img/logo/acer.png" width="90" height="50"></button></a>
-        </div>
-        <div class="col px-1"><a href="index-allmsi.html">
-                <button type="button" class="btn btn-light container-fluid" onclick="laptopMsi()">
-                    <img src="./assets/img/logo/msi-logo.png" width="90" height="50"></button></a>
-        </div>
+        </div></a>
+        <div class="col px-1"><a href="./?controller=FilterPage&action=allpcProduct&brandId=TH003">
+            <button type="button" class="btn btn-light container-fluid" >
+                <img src="./assets/img/logo/hp-logo.png" width="50" height="50"></button>
+        </div></a> -->
 
     </div>
 </DIV>
@@ -269,7 +220,7 @@
                             </div>
                         </div>
                         <div class="tovar_item_btns">
-                            <div class="open-project-link"><a class="open-project tovar_view" href="?controller=DetailPage&action=index&idProduct='<?= $product->id ?>">Chi tiết</a></div>
+                            <div class="open-project-link"><a class="open-project tovar_view" href="?controller=DetailPage&action=index&idProduct=<?= $product->id ?>">Chi tiết</a></div>
                             <a class="add_bag" href="?controller=CartPageProduct&action=index&idProduct='<?= $product->id ?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>

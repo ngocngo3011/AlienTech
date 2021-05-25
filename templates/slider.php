@@ -1,3 +1,4 @@
+
 <!--MAIN-->
 <!--Carousel-->
 <!--indicators-->
@@ -10,20 +11,13 @@
       </ul>
     <!--the slideshow-->
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./assets/img/ca-1.jpg" >
-        </div>
-        <div class="carousel-item ">
-          <img src="./assets/img/ca-4.png" alt="">
-        </div>
-        <div class="carousel-item ">
-          <img src="./assets/img/ca-3.png" alt="">
-        </div>
-        <div class="carousel-item ">
-          <img src="./assets/img/ca-2.jpg" alt="">
-        </div>
-      </div>
+<?php foreach ($data['SliderPicture'] as $key=>$product) { ?>
 
+        <div class="carousel-item <?php echo ($key == 0) ? "active" : ""; ?> ">
+          <img src=".<?= $product->sliderPicture ?>">
+        </div>
+
+<?php } ?></div>
     <!--left and right controls-->
       <a class="carousel-control-prev" href="#slides" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>

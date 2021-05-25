@@ -225,28 +225,6 @@
      location.assign("./?controller=FilterPage&action=allLaptopProduct&brandId=TH004");
    }
 
-   function laptopLenovo() {
-     location.assign("./?controller=FilterPage&action=allLaptopProduct&brandId=TH005");
-   }
-   function laptopMicrosoft() {
-     location.assign("./?controller=FilterPage&action=allLaptopProduct&brandId=TH006");
-   }
-
-   function laptopLG() {
-     location.assign("./?controller=FilterPage&action=allLaptopProduct&brandId=TH007");
-   }
-
-   function laptopRazer() {
-     location.assign("./?controller=FilterPage&action=allLaptopProduct&brandId=TH007");
-   }
-
-   function laptopAcer() {
-     location.assign("./?controller=FilterPage&action=allLaptopProduct&brandId=TH009");
-   }
-
-   function laptopMsi() {
-     location.assign("./?controller=FilterPage&action=allLaptopProduct&brandId=TH010");
-   }
 
    function PCApple() {
      location.assign("./?controller=FilterPage&action=allpcProduct&brandId=TH001");
@@ -256,6 +234,12 @@
    }
    function PCHP() {
      location.assign("./?controller=FilterPage&action=allpcProduct&brandId=TH003");
+   }
+   function PCAsus() {
+     location.assign("./?controller=FilterPage&action=allpcProduct&brandId=TH004");
+   }
+   function PCLenovo() {
+     location.assign("./?controller=FilterPage&action=allpcProduct&brandId=TH005");
    }
 
 

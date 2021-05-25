@@ -19,12 +19,15 @@ class DetailPageController
 	{
 		$idProduct = $_GET["idProduct"]; 
 
-		$detailProduct = $this->model->getDetailProduct($idProduct);
+		
 		$relativeProducts = $this->model->getRelativeProducts($idProduct);
     
+		$DetailProduct =  $this->model->getDetailProduct($idProduct);
+
 		$data = array(
-			'detailProduct' => $detailProduct,
+			//'detailProduct' => $detailProduct,
 			'relativeProducts' => $relativeProducts,
+			'DetailProduct'=>$DetailProduct,
 		);
 
 		$this->view->get('DetailPage', $data);

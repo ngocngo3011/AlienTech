@@ -21,27 +21,7 @@
 	  		<!-- Nội dung tab 1: Mô tả chung--> 
 		  	<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
 
-
-
-
-
-				<br>
-				<p> <h4> Sản phẩm Macbook Air M1 2020 chính hãng VN/A </h4></p>
-				<p>Macbook Air M1 2020 là dòng sản phẩm có thiết kế mỏng nhẹ, sang trọng và tinh tế cùng với đó là giá thành phải chăng. Sản phẩm này thu hút được đông đảo người dùng yêu thích và lựa chọn.</p>
-				<p>
-				<img src="../img/mac_overview.jpg" alt="">
-				</p>
-				<p>
-				<p>
-				MacBook Air 2020 lần đầu giới thiệu con chip M1 mà Apple thiết kế đặc biệt dành cho MacBook có CPU 8 lõi cùng với Neural Engine 16 lõi đem đến tốc độ CPU nhanh hơn tới 3,5 lần. GPU 7 lõi tăng hiệu suất nhanh hơn tới 5 lần so với thế hệ trước. Các ứng dụng văn phòng, giải trí đến đồ họa, chỉnh sửa hình ảnh lẫn dựng vlog, edit video đều không thể làm khó chiếc MacBook thế hệ mới này. </p>
-				<br>
-				<p>
-				Thời lượng pin lên đến 18 giờ - nhiều hơn 6 giờ so với các thế hệ MacBook trước đó. Thỏa sức sáng tạo không lo gián đoạn hoặc mang theo MacBook trong các chuyến đi.
-
-				Hệ điều hành macOS được nâng cấp kho ứng dụng lớn nhất từ trước đến nay, trợ giúp bạn trong tất cả các tác vụ học tập, làm việc đến giải trí, đáp ứng tất cả nhu cầu của bạn.
-
-				MacBook Air M1 2020 (MGND3SA/A) đánh dấu bước tiến mới trong công nghệ của ông lớn Apple. Với sức mạnh đáng gờm trong thiết kế thanh mảnh, MacBook Air 2020 xứng đáng là chiếc laptop cao cấp sang trọng đáng sở hữu của năm.</p>
-				</p>
+-------------------------------------------------
 
 		  	</div>
 		  	<!-- Nội dung tab 2: Thông số kỹ thuật--> 
@@ -53,12 +33,12 @@
 						<tbody>
 
 
-						
+						<?php foreach ($data['DetailProduct'] as $product) { ?>
 							<tr class="">
-								<th>CPU </th>
-								<td>8 </td>
+								<th><?= $product->tenthongso ?> </th>
+								<td><?= $product->TSCT ?> </td>
 							</tr>		
-							
+						<?php } ?>
 						</tbody>
 					</table>
 					</div>

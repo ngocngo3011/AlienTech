@@ -58,12 +58,19 @@
               </div>
               <div class="dropright">
                 <button type="button" onclick="PCHP()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">HP</button>
+              </div>
                 <!-- <div class="dropdown-menu">
                   <button type="button" onclick="xem_sp()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">Elitedesk</button>
                   <button type="button" onclick="xem_sp()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">Workstation</button>
                   <button type="button" onclick="xem_sp()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">Pavilion</button>
                 </div> -->
+              <div class="dropright">
+                <button type="button" onclick="PCAsus()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">Asus</button>
               </div>
+              <div class="dropright">
+                <button type="button" onclick="PCLenovo()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">Lenovo</button>
+              </div>              
+
             </div>
           </div>
         </li>
