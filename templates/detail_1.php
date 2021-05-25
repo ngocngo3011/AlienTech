@@ -62,25 +62,21 @@
     
 		 <p class="product-description">
 		  <p> <strong>Thương hiệu:</strong> Apple </p>
-			<p> <strong>Vi xử lý:</strong> Intel Core i5 7th, 2 nhân / 4 luồng </p>
-			<p> <strong>Màn hình:</strong> 13.3" Retina (2560 x 1600), gương </p>
-			<p> <strong>RAM:</strong> 8GB LPDDR3 bus 1866 MHz (Nâng cấp tối đa 8GB) </p>
-			<p> <strong>Card đồ họa:</strong> Intel Iris Plus 640</p>
-			<p> <strong>Lưu trữ:</strong> 256GB NVMe(Nâng cấp tối đa 2TB)</p>
-			<p> <strong>Pin:</strong> 54.5Wh </p>
-			<p> <strong>Kết nối chính:</strong> 2 x USB-C with Thunderbolt 3 </p>
-			<p> <strong>Hệ điều hành:</strong> Mac OS X! </p>
+
+<?php foreach ($data['DetailProduct'] as $product) { ?>
+							
+							
+						
+
+			<p> <strong><?= $product->tenthongso ?>:</strong> <?= $product->TSCT ?> </p>
+		<?php } ?>
 		  </p>
 
 		 <h4 class="price"> <strong style="color:red";>Giá bán: </strong> 25,00,000 VNĐ </h4> 
 			<p class="vote"><strong>91%</strong> người mua hài lòng với sản phẩm này <strong>(87 bình chọn)</strong>
 			</p> 
-				<div class="action">
-					 <button type="button" class="option" data-toggle="tooltip" title="16GB-512GB" style =" border-style: solid;">16GB-512GB</button> 
-					 <button type="button" class="option" data-toggle="tooltip" title="16GB-254GB" style = "border-style: solid;">16GB-254GB</button> 
-					 <button type="button" class="option" data-toggle="tooltip" title="8GB-512GB" style = "border-style: solid;">8GB-512GB</button> 
-				<div class="action">
-			<br>
+
+			
 				<div class="action">
 					<h6 class="colors"> Màu: 
 						 <button type="button" class="color_silver" style="padding:10px;margin-right: 15px; border-radius: 100px;" > Bạc </button> 
@@ -93,8 +89,8 @@
 				<div class="action" align="center">
 				
 				 <span class="action" align="center" > 
-					 <a href="../HTML/GioHang.html" target="_blank">            
-					 <button class="add-to-cart" type="button" >
+					 <a href="#" >            
+					 <button class="add-to-cart"  type="button" onclick="addcart()">
 					 <strong> Thêm vào giỏ hàng </strong>
 					 </button> 
 					 </a> 	    

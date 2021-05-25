@@ -2,6 +2,7 @@
 require ("setting/init.php");
 
 
+
 //điều hướng trang mặc định là homepage
 $controller = isset($_GET["controller"])?$_GET["controller"]:"Homepage";
 

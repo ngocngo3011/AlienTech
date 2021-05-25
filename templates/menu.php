@@ -45,7 +45,7 @@
         </li>
         <li class="nav-item mx-3">
           <div class="dropdown show">
-            <a class="btn " href="?controller=FilterPage&action=allPCProduct" role="button" id="dropdownMenuLink">
+            <a class="btn " href="./?controller=FilterPage&action=allPCProduct" role="button" id="dropdownMenuLink">
               <span style="font-size: 80%"><i class="fas1 fas fa-desktop"></i></span>
               <span style="font-size: 120%">Máy tính - PC</span>
             </a>
@@ -58,18 +58,25 @@
               </div>
               <div class="dropright">
                 <button type="button" onclick="PCHP()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">HP</button>
+              </div>
                 <!-- <div class="dropdown-menu">
                   <button type="button" onclick="xem_sp()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">Elitedesk</button>
                   <button type="button" onclick="xem_sp()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">Workstation</button>
                   <button type="button" onclick="xem_sp()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">Pavilion</button>
                 </div> -->
+              <div class="dropright">
+                <button type="button" onclick="PCAsus()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">Asus</button>
               </div>
+              <div class="dropright">
+                <button type="button" onclick="PCLenovo()" class="btn btn-outline-warning col-12" style="color:black;border: 0px;" data-toggle="dropdown">Lenovo</button>
+              </div>              
+
             </div>
           </div>
         </li>
         <li class="nav-item button mx-3">
           <div class="dropdown show">
-            <a class="btn " href="?controller=FilterPage&action=allAccessoryProduct" role="button" id="dropdownMenuLink">
+            <a class="btn " href="./?controller=FilterPage&action=allAccessoryProduct" role="button" id="dropdownMenuLink">
               <span style="font-size: 80%"><i class="fas1 fas fa-headphones"></i></span>
               <span style="font-size: 120%">Phụ kiện</span>
             </a>
@@ -77,7 +84,7 @@
         </li>
         <li class="nav-item button mx-3">
           <div class="dropdown show">
-            <a class="btn " href="?controller=Homepage&action=New" role="button" id="dropdownMenuLink">
+            <a class="btn " href="./?controller=Homepage&action=New" role="button" id="dropdownMenuLink">
               <span style="font-size: 80%"><i class="fas1 fas fa-newspaper"></i></span>
               <span style="font-size: 120%">Trang tin</span>
             </a>
@@ -100,7 +107,7 @@
           <a class="nav-link" href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          <a class="nav-link" href="./?controller=Homepage&action=New"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
         </li>
         <li class="nav-item mx-3">
           <a class="nav-link" href="#"><i class="fas fa-user"></i></a>

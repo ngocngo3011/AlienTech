@@ -21,6 +21,8 @@ class HomepageController
 		$pcProducts = $this->model->getProducts(4, "LSP002");
 		$accessoryProducts = $this->model->getProducts(4, "LSP003");
 		$SliderPicture = $this->model->getProducts(4, "LSP04");
+		$brandPicture = $this->model->getProducts("", "LSP005");
+
 
 		$data = array(
 			'purchasbleProducts' => $purchasbleProducts,
@@ -28,6 +30,7 @@ class HomepageController
 			'pcProducts' => $pcProducts,
 			'accessoryProducts' => $accessoryProducts,
 			'SliderPicture' => $SliderPicture,
+			'brandPicture' => $brandPicture,
 		);
 
 		$this->view->get('Homepage', $data);

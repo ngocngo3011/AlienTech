@@ -24,7 +24,7 @@
       		</div>
 	<b style="color:darkorange;"> Chương trình khuyến mãi khác: </b>
      		<div class ="pack_detail">
-     			<ul class"el_promotion_pack">
+     			<ul class="el_promotion_pack">
      			<li>
      				<a style="text-decoration: none" href="https://cellphones.com.vn/phan-mem-microsoft-office-home-and-student-2019.html">
      				Mua Office Home & Student 2019 Kèm Macbook chỉ còn 1,990,000
