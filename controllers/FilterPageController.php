@@ -48,7 +48,7 @@ class FilterPageController
 
 	public function allAccessoryProduct()
 	{
-		$filterProducts = $this->model->getProducts(null, "LSP003", $brandId);
+		$filterProducts = $this->model->getProducts(null, "LSP003","");
 
 		$data = array(
 			'filterProducts' => $filterProducts,
@@ -56,5 +56,6 @@ class FilterPageController
 
 		$this->view->get('FilterPage', $data);
 	}
+
 
 }

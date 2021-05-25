@@ -2,6 +2,11 @@
 require_once("./core/Model.php"); 
 require_once("./models/BasicProduct.php");
 
+	class ProductAttribute
+	{
+		public $tenthongso;
+		public $giatri; 
+	}
 	
 	
 	class DetailProduct extends Model
@@ -57,30 +62,60 @@ require_once("./models/BasicProduct.php");
 				$TenTS = isset($resultObject->tenthongso)?$resultObject->tenthongso:""; 
 				$product->tenthongso = $TenTS;
 
-				//lay mo ta sp
-				$querymota = "SELECT sp.mota
-						FROM tbl_sanpham sp
-
-						WHERE sp.id_sanpham = '$idProduct' ";
-					
-				$stmt = $this->db->prepare($querymota);
-				$stmt->execute();
-				$resultObject = $stmt->fetchObject();
-				$mota = isset($resultObject->mota)?$resultObject->mota:""; 
-				$product->mota = $mota;
+				
 
 				array_push($products, $product);
 			}
 			return $products;
 		}
 
-		
-		public function getMoreInformation($idProduct='SP008') {
+		//lay mo ta sp			
+		public function getMoreInformation($idProduct) {
 			// TODO
+			// $products = array();
+			$product = new BasicProduct();
+			//$productId = $resultSetProduct[$i]->id_sanpham;
+			$querymota = "SELECT *
+						FROM tbl_sanpham 
+						WHERE id_sanpham = '$idProduct' ";
+					
+					$stmt = $this->db->prepare($querymota);
+					$stmt->execute();
+					$resultObject = $stmt->fetchObject();
+					$mota = isset($resultObject->mota)?$resultObject->mota:""; 
+					$product->mota = $mota;
 
+					$tensanpham = isset($resultObject->tensanpham)?$resultObject->tensanpham:"";
+					$product->tensanpham = $tensanpham;
+
+					$giaban = number_format(isset($resultObject->giaban)?$resultObject->giaban:"");
+					$product->giaban = $giaban;
 				// //Lay thông tin cơ bản sản phẩm 
 
-			return $this;
+					
+
+			return $product;
+		}
+		public function getPicture($idProduct) {
+			// TODO
+
+			$products= array();
+						
+			$queryPicture = "SELECT hinhanh_url 
+							FROM tbl_hinhanh 
+							WHERE id_sanpham='".$idProduct."' LIMIT 5";
+					
+					$stmt = $this->db->prepare($queryPicture);
+					$stmt->execute();
+					while ( $resultObject = $stmt->fetchObject()) 
+					{
+						$product = new BasicProduct();
+						$picture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:""; 
+						$product->picture = $picture;
+						array_push($products,$product);
+					}
+					
+				return $products;
 		}
 
 		public function getRelativeProducts($idProduct='SP008') {

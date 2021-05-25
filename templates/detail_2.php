@@ -21,7 +21,10 @@
 	  		<!-- Nội dung tab 1: Mô tả chung--> 
 		  	<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
 
--------------------------------------------------
+		  			<div> <br>
+		  				<h4 class="product-title"> <?= $data['MoreInformation']->tensanpham ?> </h4> 
+				<?= $data['MoreInformation']->mota ?>
+				</div>
 					
 
 		  	</div>

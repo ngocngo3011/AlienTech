@@ -6,43 +6,50 @@
 <div class ="container-fluid">
  	
 <!-- I: col12 - Giới thiệu sản phẩm-->
+<!-- I: col12 - Giới thiệu sản phẩm-->
  <div class ="wrapper row">
 	<!-- I.1.1: col6 - Hình ảnh sản phẩm: Fullsize + thumnails--> 
     <div class="col-md-6 ">
   		<div class="preview-pic tab-content">
-   			 <div class ="tab-pane active" id="pic" > <img src="./assets/img/mac_pic.jpg" alt ="">
+  			<?php 
+  			 $i=0;
+
+  			foreach ($data['pictureProduct'] as $products) { 
+  			 if ($i==0){  ?>
+  				<div class ="tab-pane active" id="pic" > <img src=".<?= $products->picture ?>" alt ="">
    			 </div>
-			 <div class="tab-pane" id="pic_1"><img src="./assets/img/mac_pic1.jpg" alt="Anh san pham 1">
-			 </div> 
-			 <div class="tab-pane" id="pic_2"><img src="./assets/img/mac_pic2.jpg" alt="Anh san pham 2">
-			 </div> 
-			 <div class="tab-pane" id="pic_3"> <img src="./assets/img/mac_pic6 (2).jpg" alt="Anh san pham 3">
-			 </div> 
-			 <div class="tab-pane" id="pic_4"><img src="./assets/img/mac_pic3.png" alt="Anh san pham 4">
-      		</div> 
+  			<?php }
+  			else { ?> 
+  				<div class ="tab-pane" id="pic_<?=$i ?>" > <img src=".<?= $products->picture ?>" alt ="">
+   			 	</div>
+   			<?php  } $i++; } ?>
+
+
       	</div>
       	<br> 
       	<p> <strong style="color: indianred">Xem thêm hình ảnh sản phẩm </strong></p>
       	<div class="Detailed_Images">
       	  <br>
 		  <ul class="preview-thumbnail nav nav-tabs"> 
-			  <li class="active"><a data-target="#pic" data-toggle="tab"><img src="../img/mac_pic.jpg" alt=""></a>
+		  	<?php 
+		  		$i=0;
+		  	
+		  	foreach ($data['pictureProduct'] as $products) { 
+		  	if ($i==0){	?>
+			  <li class="active"><a data-target="#pic" data-toggle="tab"><img src=".<?= $products->picture ?>" alt=""></a>
 			  </li> 
-			  <li class="active"><a data-target="#pic_1" data-toggle="tab"><img src="../img/mac_pic1.jpg" alt=""></a>
+			  <?php }
+			  else { ?>
+			  	 <li><a data-target="#pic_<?=$i ?>" data-toggle="tab"><img src=".<?= $products->picture ?>" alt=""></a>
 			  </li> 
-			  <li><a data-target="#pic_2" data-toggle="tab"><img src="./assets/img/mac_pic2.jpg" alt=""></a>
-			  </li> 
-			  <li><a data-target="#pic_3" data-toggle="tab"><img src="./assets/img/mac_pic6 (2).jpg" alt=""></a>
-			  </li> 
-			  <li><a data-target="#pic_4" data-toggle="tab"><img src="./assets/img/mac_pic3.png" alt=""></a>
-			  </li> 
+			  <?php }$i++;}  ?>
 		 </ul>
 		 </div> 
 	 
 	</div>
 	<!-- I.1.2: col6 - Mô tả sản phẩm: Tên + Option + Buttons--> 
-	<div class="details col-md-6 "> 
-		 <h3 class="product-title"> Apple MacBook Air M1 256GB 2020 I I Chính hãng Apple Việt Nam </h3> 
+	<div class="details col-md-6 "> <br>
+		 <h3 class="product-title"> <?= $data['MoreInformation']->tensanpham ?> </h3> 
 		 <div class="rating"> 
 		  <div class="stars"> 
 			<span class="fa fa-star checked"></span> 
@@ -66,7 +73,7 @@
 		<?php } ?>
 		  </p>
 
-		 <h4 class="price"> <strong style="color:red";>Giá bán: </strong> 25,00,000 VNĐ </h4> 
+		 <h4 class="price"> <strong style="color:red";>Giá bán: </strong> <?= $data['MoreInformation']->giaban ?> </h4> 
 			<p class="vote"><strong>91%</strong> người mua hài lòng với sản phẩm này <strong>(87 bình chọn)</strong>
 			</p> 
 

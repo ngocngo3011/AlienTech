@@ -15,7 +15,7 @@
                                   <div class="card  tovar_item padbot40 filter ">
                                       <div class="tovar_img">
                                           <div class="tovar_img_wrapper">
-                                              <label class="baohanh badge-warning" style="color: black; margin:10px; font-size: 12px;">Trả góp 0%</label>
+                                             <!--  <label class="baohanh badge-warning" style="color: black; margin:10px; font-size: 12px;">Trả góp 0%</label> -->
                                               <img class="card-img-top" src=".<?= $product->mainPicture ?>" alt="">
                                               <div class="card-body">
                                                   <p class="card-title text-center" style="font-weight: bold;"><?= $product->productName ?></p>
@@ -50,7 +50,7 @@
     <br>
     <div class="row justify-content-center" id="duy" style="background-color: white">           
         <button onclick="Function()"id="duy" class="btn btn-outline-warning" style="color:black;">Xem thêm </button>
-    </div> 
+    </div> <br>
     <!--Nút xem thêm = js--> 
 <!--Nút xem thêm = js--> 
    <script type="text/javascript">
@@ -78,7 +78,7 @@
                                   <div class="card  tovar_item padbot40 filter ">
                                       <div class="tovar_img">
                                           <div class="tovar_img_wrapper">
-                                              <label class="baohanh badge-warning" style="color: black; margin:10px; font-size: 12px;">Trả góp 0%</label>
+                                              <!-- <label class="baohanh badge-warning" style="color: black; margin:10px; font-size: 12px;">Trả góp 0%</label> -->
                                               <img class="card-img-top" src=".<?= $product->mainPicture ?>" alt="">
                                               <div class="card-body">
                                                   <p class="card-title text-center" style="font-weight: bold;"><?= $product->productName ?></p>
