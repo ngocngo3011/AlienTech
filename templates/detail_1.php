@@ -10,28 +10,38 @@
 	<!-- I.1.1: col6 - Hình ảnh sản phẩm: Fullsize + thumnails--> 
     <div class="col-md-6 ">
   		<div class="preview-pic tab-content">
+  			<?php 
+  			 $i=0;
 
-   			 <div class ="tab-pane active" id="pic" > <img src="./assets/img/mac_pic.jpg" alt ="">
+  			foreach ($data['pictureProduct'] as $products) { 
+  			 if ($i==0){  ?>
+  				<div class ="tab-pane active" id="pic" > <img src=".<?= $products->picture ?>" alt ="">
    			 </div>
-			 <div class="tab-pane" id="pic_1"><img src="./assets/img/mac_pic1.jpg" alt="Anh san pham 1">
-			 </div> 
-			 <div class="tab-pane" id="pic_2"><img src="./assets/img/mac_pic2.jpg" alt="Anh san pham 2">
-			 </div> 
-			 <div class="tab-pane" id="pic_3"> <img src="./assets/img/mac_pic6 (2).jpg" alt="Anh san pham 3">
-			 </div> 
-			 <div class="tab-pane" id="pic_4"><img src="./assets/img/mac_pic3.png" alt="Anh san pham 4">
-      		</div> 
+  			<?php }
+  			else { ?> 
+  				<div class ="tab-pane" id="pic_<?=$i ?>" > <img src=".<?= $products->picture ?>" alt ="">
+   			 	</div>
+   			<?php  } $i++; } ?>
+
+
       	</div>
       	<br> 
       	<p> <strong style="color: indianred">Xem thêm hình ảnh sản phẩm </strong></p>
       	<div class="Detailed_Images">
       	  <br>
 		  <ul class="preview-thumbnail nav nav-tabs"> 
-		  	<?php foreach ($data['pictureProduct'] as $product) { ?>
-      		 
-			  <li class="active"><a data-target="#pic" data-toggle="tab"><img src=".<?= $product->picture ?>" alt=""></a>
+		  	<?php 
+		  		$i=0;
+		  	
+		  	foreach ($data['pictureProduct'] as $products) { 
+		  	if ($i==0){	?>
+			  <li class="active"><a data-target="#pic" data-toggle="tab"><img src=".<?= $products->picture ?>" alt=""></a>
 			  </li> 
-			  <?php } ?>
+			  <?php }
+			  else { ?>
+			  	 <li><a data-target="#pic_<?=$i ?>" data-toggle="tab"><img src=".<?= $products->picture ?>" alt=""></a>
+			  </li> 
+			  <?php }$i++;}  ?>
 		 </ul>
 		 </div> 
 	 

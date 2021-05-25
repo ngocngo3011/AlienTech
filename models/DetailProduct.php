@@ -30,7 +30,7 @@ require_once("./models/BasicProduct.php");
 			// TODO
 			$query = "SELECT tensanpham, price
 						FROM tbl_sanpham 
-						WHERE id_loaisanpham = '$idProduct' ";
+						WHERE id_loaisanpham = '".$idProduct."' ";
 
 				// //Lay thông tin cơ bản sản phẩm 
 				$product = new BasicProduct();
@@ -151,34 +151,26 @@ require_once("./models/BasicProduct.php");
 		public function getPicture($ProductID='SP008') {
 			// TODO
 
-			$query = "SELECT * 
-						FROM tbl_hinhanh 
-						WHERE id_sanpham = '$ProductID' ";
-
-			$stmt = $this->db->prepare($query);
-			$stmt->execute();
-			$resultSetProduct = $stmt->fetchAll(PDO::FETCH_CLASS);
-
-			for($i=0; $i<count($resultSetProduct);$i++){
-				$product = new BasicProduct();
-				$product->id = $resultSetProduct[$i]->id_sanpham;
-
-			$products = array();
-			$productId = $resultSetProduct[$i]->id_sanpham;
+			$products= array();
+						
 			$queryPicture = "SELECT hinhanh_url 
 							FROM tbl_hinhanh 
-							WHERE id_sanpham='productId' LIMIT 5";
+							WHERE id_sanpham='".$ProductID."' LIMIT 5";
 					
 					$stmt = $this->db->prepare($queryPicture);
 					$stmt->execute();
-					$resultObject = $stmt->fetchObject();
-					$picture = isset($resultObject->picture)?$resultObject->picture:""; 
-					$product->picture = $picture;
-			
-				array_push($products, $product);
-			}
-			return $products;
+					while ( $resultObject = $stmt->fetchObject()) 
+					{
+						$product = new BasicProduct();
+						$picture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:""; 
+						$product->picture = $picture;
+						array_push($products,$product);
+					}
+					
+				return $products;
 		}
+			
+		
 
 		
 
