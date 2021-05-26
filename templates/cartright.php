@@ -100,9 +100,9 @@
 				</td></tr>
 				<tr><td> 
 					<input type="radio" id="payonl1" name="ship" value="store">
-							<label for="payonl1"><img src="../img/Hình/Logo/ZaloPay_Logo.png" width="50"> Cổng thanh toán ZaloPay</label><br>
+							<label for="payonl1"><img src="./assets/img/Logo/ZaloPay_Logo.png" width="50"> Cổng thanh toán ZaloPay</label><br>
 					<input type="radio" id="payonl2" name="ship" value="store">
-							<label for="payonl2"><img src="../img/Hình/Logo/Logo-VNPAYQR-update.png" width="50"> Cổng thanh toán VNPay</label>
+							<label for="payonl2"><img src="./assets/img/Logo/Logo-VNPAYQR-update.png" width="50"> Cổng thanh toán VNPay</label>
 						<button class="btn btn-warning btn-block"><b>THANH TOÁN ONLINE</b></button>
 					<br>
 					<input type="checkbox" id="dk" name="dk" value="dongydk">
