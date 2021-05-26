@@ -137,9 +137,9 @@ input::-webkit-input-placeholder {
 
 /* CSS PRODUCT DETAIL*/
 #thongtinsanpham{
-	background-color:white;
-	border-radius: 10px;
-	padding:10px;
+  background-color:cornsilk;
+  border-radius: 10px;
+  padding:10px;
 }
 img {   
 max-width: 100%;
@@ -158,7 +158,7 @@ flex-direction: column;
 } 
  
 td a.hover{
-	color:red;
+  color:red;
 }
 .preview-pic {  
 
@@ -200,7 +200,7 @@ animation-duration: .3s;
  
 .card { 
 margin-top: 0px;    
-background: white;   
+background: #eee;   
 padding: 0em;   
 line-height: 1.5em;
 } 
@@ -258,38 +258,54 @@ background-color: red;
 border-radius: 25px;
 }
 
-
+.add-to-cart:hover{
+background-color: darkgreen;
+transition: background-color 1s;
+text-decoration:none;
+}
 
 .sub_content li:hover{
-	color:red;
+  color:red;
 }
 
 .sub_content p:active{
-	color:gray;
+  color:gray;
 }
 
 #store_option a{
-	color: black;
-	text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 #store_option p:hover{
-	color:red;
+  color:red;
 }
-
+.add-to-cart:active{
+background-color: black;
+  text-decoration: none;
+}
+ 
 .not-available {    
 text-align: center; 
 line-height: 2em;
 }
  
-.not-available::before { 
+.not-available:before { 
 font-family: fontawesome;   
 content: "\f00d";   
 color: #fff;
 }
  
-
+.color_grey {   
+background-color: grey;
+}
  
-
+.color_silver {    
+background-color: silver;
+}
+ 
+.color_yellow { 
+background-color: goldenrod;
+}
 
 .option {
 padding: 10px;
@@ -303,13 +319,21 @@ border-radius: 10px;
 }
 .comment-respond .author, .comment-respond .comment, .comment-respond .email, .comment-respond .url {
     border: 1px solid #d8d8d8;
-	padding: 18px 12px;}
+  padding: 18px 12px;}
 
+textarea{
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
 tooltip-inner {    
 padding: 1.3em;
 } 
 
-
+.text-left col-sm-4{
+background-color:antiquewhite;
+}
 
 #myTab{
 background-color: aliceblue;
@@ -418,39 +442,39 @@ border-radius: 5px;
 .preview-pic tab-pane: hover{
     -webkit-transform: scale(1);
             transform: scale(1.03);
-     box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.05); 	
+     box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.05);   
 }
 
 .sub_content a:hover{
-	color:red;
+  color:red;
 }
 
 .sub_content a:active{
-	color:grey;
+  color:grey;
 }
 /*Footer*/
 
 #footer{
-	font-family: 'Rubik', sans-serif;
-	font-weight: 550;
-	font-size: 14px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 550;
+  font-size: 14px;
 }
 .heading{
-	margin-top: 2px;
-	font-size: 16px;
+  margin-top: 2px;
+  font-size: 16px;
 }
 .addressft{
-	font-weight: 400;
-	margin-left: 2%;
+  font-weight: 400;
+  margin-left: 2%;
 }
 .maps{
-	margin-left: 1%;
-	font-weight: 550;
+  margin-left: 1%;
+  font-weight: 550;
 }
 .phone{
-	font-size: 16px;
+  font-size: 16px;
 }
 #headingnavft{
-	font-size: 16px;
-	font-weight: 550;
+  font-size: 16px;
+  font-weight: 550;
 }

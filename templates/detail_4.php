@@ -12,7 +12,7 @@
         <?php foreach ($data['relatedLaptopProducts'] as $product) { ?>
 
                               <div class="col-md-3 col-6 tovar_wrapper p-0" data-appear-top-offset='-100' data-animated='fadeInUp'>
-                                  <div class="card  tovar_item padbot40 filter ">
+                                  <div class="card  tovar_item padbot40 filter " style="background-color: white">
                                       <div class="tovar_img">
                                           <div class="tovar_img_wrapper">
                                              <!--  <label class="baohanh badge-warning" style="color: black; margin:10px; font-size: 12px;">Trả góp 0%</label> -->
@@ -75,7 +75,7 @@
             ?>
 
                               <div class="col-md-3 col-6 tovar_wrapper p-0" data-appear-top-offset='-100' data-animated='fadeInUp'>
-                                  <div class="card  tovar_item padbot40 filter ">
+                                  <div class="card  tovar_item padbot40 filter "style="background-color: white">
                                       <div class="tovar_img">
                                           <div class="tovar_img_wrapper">
                                               <!-- <label class="baohanh badge-warning" style="color: black; margin:10px; font-size: 12px;">Trả góp 0%</label> -->

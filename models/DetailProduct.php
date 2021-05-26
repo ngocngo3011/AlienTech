@@ -75,6 +75,8 @@ require_once("./models/BasicProduct.php");
 			// $products = array();
 			$product = new BasicProduct();
 			//$productId = $resultSetProduct[$i]->id_sanpham;
+
+
 			$querymota = "SELECT *
 						FROM tbl_sanpham 
 						WHERE id_sanpham = '$idProduct' ";
@@ -88,11 +90,30 @@ require_once("./models/BasicProduct.php");
 					$tensanpham = isset($resultObject->tensanpham)?$resultObject->tensanpham:"";
 					$product->tensanpham = $tensanpham;
 
-					$giaban = number_format(isset($resultObject->giaban)?$resultObject->giaban:"");
-					$product->giaban = $giaban;
-				// //Lay thông tin cơ bản sản phẩm 
+					$giagiam = number_format(isset($resultObject->giagiam)?$resultObject->giagiam:"");
+					$product->giagiam = $giagiam;
+				
+			$queryRating = "SELECT COALESCE(ROUND(AVG(diem))) diemtrungbinh, COUNT(diem) luotdanhgia 
+							FROM tbl_danhgia 
+							WHERE id_sanpham = '$idProduct'";
+
+				$stmt = $this->db->prepare($queryRating);
+				$stmt->execute();
+				$resultObject = $stmt->fetchObject();
+				$product->rateNumbers = $resultObject->luotdanhgia;
+				$product->starNumbers = $resultObject->diemtrungbinh;
 
 					
+			$querytenthuonghieu = "SELECT th.tenthuonghieu
+							FROM `tbl_sanpham` sp
+							INNER JOIN tbl_thuonghieu th ON th.id_thuonghieu = sp.id_thuonghieu
+							WHERE sp.id_sanpham = '$idProduct'";
+
+				$stmt = $this->db->prepare($querytenthuonghieu);
+				$stmt->execute();
+				$resultObject = $stmt->fetchObject();
+				$tenthuonghieu = isset($resultObject->tenthuonghieu)?$resultObject->tenthuonghieu:""; 
+				$product->tenthuonghieu = $tenthuonghieu;
 
 			return $product;
 		}

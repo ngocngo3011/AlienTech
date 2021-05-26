@@ -26,10 +26,10 @@
 
 
       	</div>
-      	<br> 
+     
       	<p> <strong style="color: indianred">Xem thêm hình ảnh sản phẩm </strong></p>
       	<div class="Detailed_Images">
-      	  <br>
+      	  
 		  <ul class="preview-thumbnail nav nav-tabs"> 
 		  	<?php 
 		  		$i=0;
@@ -51,32 +51,37 @@
 	<div class="details col-md-6 "> <br>
 		 <h3 class="product-title"> <?= $data['MoreInformation']->tensanpham ?> </h3> 
 		 <div class="rating"> 
-		  <div class="stars"> 
-			<span class="fa fa-star checked"></span> 
-			<span class="fa fa-star checked"></span> 
-			<span class="fa fa-star checked"></span> 
-			<span class="fa fa-star"></span> 
-			<span class="fa fa-star"></span> 
-		  </div>
-		   <span class="review-no">123 đánh giá</span> 
+
+		   <span class="review-no">
+	              <?php for ($i = 0; $i < $data['MoreInformation']->starNumbers; $i++) { ?>
+	                  <i class="fas fa-star" style="color: #ffc107"></i>
+	              <?php } ?>
+	              <?php for ($i = $data['MoreInformation']->starNumbers; $i < 5; $i++) { ?>
+	                  <i class="far fa-star"style="color: #ffc107"></i>
+	              <?php } ?>
+	              <span style="color: black"><?= $data['MoreInformation']->rateNumbers ?> đánh giá</span>
+	        </span> 
 		 </div> 
     
+									
+
+
 		 <p class="product-description">
-		  <p> <strong>Thương hiệu:</strong> Apple </p>
+		  <p> <strong>Thương hiệu:</strong> <?= $data['MoreInformation']->tenthuonghieu ?> </p>
 
-<?php foreach ($data['DetailProduct'] as $product) { ?>
-							
-							
-						
-
+		<?php foreach ($data['DetailProduct'] as $product) { ?>
 			<p> <strong><?= $product->tenthongso ?>:</strong> <?= $product->TSCT ?> </p>
 		<?php } ?>
 		  </p>
 
-		 <h4 class="price"> <strong style="color:red";>Giá bán: </strong> <?= $data['MoreInformation']->giaban ?> </h4> 
-			<p class="vote"><strong>91%</strong> người mua hài lòng với sản phẩm này <strong>(87 bình chọn)</strong>
+		 <h4 class="price"> <strong style="color:red";>Giá bán: </strong> <?= $data['MoreInformation']->giagiam ?> ₫</h4> 
+			<!-- <p class="vote"><strong>91%</strong> người mua hài lòng với sản phẩm này <strong>(87 bình chọn)</strong> -->
 			</p> 
-
+				<div class="action">
+					 <button type="button" class="option" data-toggle="tooltip" title="16GB-512GB" style =" border-style: solid;">16GB-512GB</button> 
+					 <button type="button" class="option" data-toggle="tooltip" title="16GB-254GB" style = "border-style: solid;">16GB-254GB</button> 
+					 <button type="button" class="option" data-toggle="tooltip" title="8GB-512GB" style = "border-style: solid;">8GB-512GB</button> 
+				<div class="action"><br>
 			
 				<div class="action">
 					<h6 class="colors"> Màu: 
@@ -102,4 +107,4 @@
    </div> 
   </div>
  </div>
- <br>
+ <br> 
