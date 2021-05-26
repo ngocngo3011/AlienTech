@@ -5,14 +5,18 @@
           <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#" style=" color: #cc5801">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page"> laptop</li>
+                  <li class="breadcrumb-item active" aria-current="page"> 
+                    <?= $data["category_name"] ?>
+                  </li>
               </ol>
           </nav>
       </div>
   </div>
 
   <div class="container" style="margin-bottom: 20px">
-      <h2 style="font-weight: bold">Máy tính xách tay</h2>
+      <h2 style="font-weight: bold">
+            <?= $data["category_name"] ?>
+      </h2>
   </div>
 
 
@@ -32,7 +36,6 @@
           </div>
       </div>
   </div>
-
 
 
 
