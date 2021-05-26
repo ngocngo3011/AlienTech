@@ -10,17 +10,18 @@
  <div class ="wrapper row">
 	<!-- I.1.1: col6 - Hình ảnh sản phẩm: Fullsize + thumnails--> 
     <div class="col-md-6 ">
-  		<div class="preview-pic tab-content">
+  		<div class="preview-pic tab-content" style="height: 450px;">
+
   			<?php 
   			 $i=0;
 
   			foreach ($data['pictureProduct'] as $products) { 
   			 if ($i==0){  ?>
-  				<div class ="tab-pane active" id="pic" > <img src=".<?= $products->picture ?>" alt ="">
+  				<div class ="tab-pane active img-fluid" id="pic" > <img src=".<?= $products->picture ?>" alt ="">
    			 </div>
   			<?php }
   			else { ?> 
-  				<div class ="tab-pane" id="pic_<?=$i ?>" > <img src=".<?= $products->picture ?>" alt ="">
+  				<div class ="tab-pane img-fluid" id="pic_<?=$i ?>" > <img src=".<?= $products->picture ?>" alt ="">
    			 	</div>
    			<?php  } $i++; } ?>
 
