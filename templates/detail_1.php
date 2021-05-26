@@ -10,7 +10,7 @@
  <div class ="wrapper row">
 	<!-- I.1.1: col6 - Hình ảnh sản phẩm: Fullsize + thumnails--> 
     <div class="col-md-6 ">
-  		<div class="preview-pic tab-content" style="height: 450px;">
+  		<div class="preview-pic tab-content " style="height: 450px; ">
 
   			<?php 
   			 $i=0;
