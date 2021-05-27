@@ -78,11 +78,11 @@
 		 <h4 class="price"> <strong style="color:red";>Giá bán: </strong> <?= $data['MoreInformation']->giagiam ?> ₫</h4> 
 			<!-- <p class="vote"><strong>91%</strong> người mua hài lòng với sản phẩm này <strong>(87 bình chọn)</strong> -->
 			</p> 
-				<div class="action">
+				<!-- <div class="action">
 					 <button type="button" class="option" data-toggle="tooltip" title="16GB-512GB" style =" border-style: solid;">16GB-512GB</button> 
 					 <button type="button" class="option" data-toggle="tooltip" title="16GB-254GB" style = "border-style: solid;">16GB-254GB</button> 
 					 <button type="button" class="option" data-toggle="tooltip" title="8GB-512GB" style = "border-style: solid;">8GB-512GB</button> 
-				<div class="action"><br>
+				<div class="action"><br> -->
 			
 				<div class="action">
 					<h6 class="colors"> Màu: 
@@ -96,7 +96,7 @@
 				<div class="action" align="center">
 				
 				 <span class="action" align="center" > 
-					 <a href="#" >            
+					 <a  >            
 					 <button class="add-to-cart"  type="button" onclick="addcart()">
 					 <strong> Thêm vào giỏ hàng </strong>
 					 </button> 

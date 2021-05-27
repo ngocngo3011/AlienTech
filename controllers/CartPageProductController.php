@@ -22,10 +22,12 @@ class CartPageProductController
 
 		$detailProduct = $this->model->getDetailProduct($idProduct);
 		$relativeProducts = $this->model->getRelativeProducts($idProduct);
+		$MoreInformation = $this->model->getMoreInformation($idProduct);
     
 		$data = array(
 			'detailProduct' => $detailProduct,
 			'relativeProducts' => $relativeProducts,
+			'MoreInformation' => $MoreInformation,
 		);
 
 		$this->view->get('CartPage', $data);

@@ -18,27 +18,20 @@ class DetailPageController
 	public function index()
 	{
 		$idProduct = $_GET["idProduct"]; 
-
-		
-		$relativeProducts = $this->model->getRelativeProducts($idProduct);
-    
+		    
 		$DetailProduct =  $this->model->getDetailProduct($idProduct);
 
-
-		$relatedLaptopProducts = $this->model->getProducts(4, "LSP001", "");
-		$allrelatedLaptopProducts = $this->model->getProducts(null, "LSP001", "");
-
-	
-
+		$relatedProducts = $this->model->getRelatedProducts(4, $idProduct);
+		$allRelatedProducts = $this->model->getRelatedProducts(null, $idProduct);
+		
 		$MoreInformation = $this->model->getMoreInformation($idProduct);
+
 		$pictureProduct = $this->model->getPicture($idProduct);
 
 		$data = array(
-			//'detailProduct' => $detailProduct,
-			'relativeProducts' => $relativeProducts,
 			'DetailProduct'=>$DetailProduct,
-			'relatedLaptopProducts' => $relatedLaptopProducts,
-			'allrelatedLaptopProducts' => $allrelatedLaptopProducts,
+			'relatedProducts' => $relatedProducts,
+			'allRelatedProducts' => $allRelatedProducts,
 			'MoreInformation' => $MoreInformation,
 			'pictureProduct'=> $pictureProduct,
 		);

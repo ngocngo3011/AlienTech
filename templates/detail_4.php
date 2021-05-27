@@ -9,7 +9,7 @@
     </div>
     <!--V.2: Product List--> 
     <div class="row padding" id="di">
-        <?php foreach ($data['relatedLaptopProducts'] as $product) { ?>
+        <?php foreach ($data['relatedProducts'] as $product) { ?>
 
                               <div class="col-md-3 col-6 tovar_wrapper p-0" data-appear-top-offset='-100' data-animated='fadeInUp'>
                                   <div class="card  tovar_item padbot40 filter " style="background-color: white">
@@ -47,10 +47,15 @@
                           <?php } ?>
 </div>
     <!-- V.3: Button xem thêm--> 
+    <?php if (count($data['allRelatedProducts']) > 4) { ?>
+
     <br>
-    <div class="row justify-content-center" id="duy" style="background-color: white">           
-        <button onclick="Function()"id="duy" class="btn btn-outline-warning" style="color:black;">Xem thêm </button>
-    </div> <br>
+        <div class="row justify-content-center" id="duy" style="background-color: white">           
+            <button onclick="Function()"id="duy" class="btn btn-outline-warning" style="color:black;">Xem thêm </button>
+        </div> 
+    <br>
+
+    <?php } ?>
     <!--Nút xem thêm = js--> 
 <!--Nút xem thêm = js--> 
    <script type="text/javascript">
@@ -71,7 +76,7 @@
     <div id="ProductList" style=" display: none;">
        <!-- ProductList1 xem thêm --> 
   <div class="row padding">
-        <?php foreach ($data['allrelatedLaptopProducts'] as $key=>$product) { 
+        <?php foreach ($data['allRelatedProducts'] as $key=>$product) { 
             ?>
 
                               <div class="col-md-3 col-6 tovar_wrapper p-0" data-appear-top-offset='-100' data-animated='fadeInUp'>
@@ -114,4 +119,3 @@
  </div>
 </div>
 </div></div></div></div>
-

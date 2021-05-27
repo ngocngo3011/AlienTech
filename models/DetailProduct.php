@@ -61,7 +61,7 @@ require_once("./models/BasicProduct.php");
 				$resultObject = $stmt->fetchObject();
 				$TenTS = isset($resultObject->tenthongso)?$resultObject->tenthongso:""; 
 				$product->tenthongso = $TenTS;
-
+				$product->idTSCT = $idTSCT;
 				
 
 				array_push($products, $product);
@@ -119,15 +119,6 @@ require_once("./models/BasicProduct.php");
 		}
 
 
-
-				
-
-
-
-
-
-
-
 		public function getPicture($idProduct) {
 			// TODO
 
@@ -150,15 +141,19 @@ require_once("./models/BasicProduct.php");
 				return $products;
 		}
 
-		public function getRelativeProducts($idProduct='SP008') {
-			// TODO
-			
-			return $this;
-		}
+		// HAM LAY NHUNG SAN PHAM LIEN QUAN
+		public function getRelatedProducts($limit, $idProduct) {
+			// Tim loai san pham va thuong hieu cua san pham co id 
+			$queryProduct = "SELECT * 
+						FROM tbl_sanpham 
+						WHERE id_sanpham = '$idProduct' ";
+			$stmt = $this->db->prepare($queryProduct);
+			$stmt->execute();
+			$resultObjectProduct = $stmt->fetchObject();
 
+			$category= $resultObjectProduct->id_loaisanpham; 
+			$brandId=  $resultObjectProduct->id_thuonghieu; 
 
-				// HAM LAY NHUNG SAN PHAM DAI DIEN THEO DANH MUC[LAPTOP, PC, PHUKIEN]
-		public function getProducts($limit, $category='LSP001', $brandId="") {
 			$query = "SELECT * 
 						FROM tbl_sanpham 
 						WHERE id_loaisanpham = '$category' ";
