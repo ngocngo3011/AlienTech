@@ -20,10 +20,6 @@ class DetailPageController
 		$idProduct = $_GET["idProduct"]; 
 		    
 		$DetailProduct =  $this->model->getDetailProduct($idProduct);
-<<<<<<< HEAD
-		$relatedLaptopProducts = $this->model->getProducts(4, "LSP001", "");
-		$allrelatedLaptopProducts = $this->model->getProducts(null, "LSP001", "");
-=======
 
 		$relatedProducts = $this->model->getRelatedProducts(4, $idProduct);
 		$allRelatedProducts = $this->model->getRelatedProducts(null, $idProduct);
@@ -32,18 +28,12 @@ class DetailPageController
 
 		$pictureProduct = $this->model->getPicture($idProduct);
 
->>>>>>> 581bbcf15ae66043fe9a92d212f39b6694cc7d7c
 		$data = array(
 			'DetailProduct'=>$DetailProduct,
-<<<<<<< HEAD
-			'relatedLaptopProducts' => $relatedLaptopProducts,
-			'allrelatedLaptopProducts' => $allrelatedLaptopProducts,
-=======
 			'relatedProducts' => $relatedProducts,
 			'allRelatedProducts' => $allRelatedProducts,
 			'MoreInformation' => $MoreInformation,
 			'pictureProduct'=> $pictureProduct,
->>>>>>> 581bbcf15ae66043fe9a92d212f39b6694cc7d7c
 		);
 
 		$this->view->get('DetailPage', $data);

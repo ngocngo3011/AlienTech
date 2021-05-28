@@ -33,8 +33,13 @@ class HomepageController
 			'brandPicture' => $brandPicture,
 		);
 
+		echo '<pre>';
+		print_r($data);
+
 		$this->view->get('Homepage', $data);
 	}
+
+		
 
 
 	public function New()

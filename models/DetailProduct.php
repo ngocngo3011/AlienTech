@@ -2,6 +2,11 @@
 require_once("./core/Model.php"); 
 require_once("./models/BasicProduct.php");
 
+	class ProductAttribute
+	{
+		public $tenthongso;
+		public $giatri; 
+	}
 	
 	
 	class DetailProduct extends Model
@@ -56,38 +61,17 @@ require_once("./models/BasicProduct.php");
 				$resultObject = $stmt->fetchObject();
 				$TenTS = isset($resultObject->tenthongso)?$resultObject->tenthongso:""; 
 				$product->tenthongso = $TenTS;
-<<<<<<< HEAD
-
-				//lay mo ta sp
-				$querymota = "SELECT sp.mota
-						FROM tbl_sanpham sp
-
-						WHERE sp.id_sanpham = '$idProduct' ";
-					
-				$stmt = $this->db->prepare($querymota);
-				$stmt->execute();
-				$resultObject = $stmt->fetchObject();
-				$mota = isset($resultObject->mota)?$resultObject->mota:""; 
-				$product->mota = $mota;
-=======
 				$product->idTSCT = $idTSCT;
 				
->>>>>>> 581bbcf15ae66043fe9a92d212f39b6694cc7d7c
 
 				array_push($products, $product);
 			}
 			return $products;
 		}
 
-		
-		public function getMoreInformation($idProduct='SP008') {
+		//lay mo ta sp			
+		public function getMoreInformation($idProduct) {
 			// TODO
-<<<<<<< HEAD
-
-				// //Lay thông tin cơ bản sản phẩm 
-
-			return $this;
-=======
 			// $products = array();
 			$product = new BasicProduct();
 			//$productId = $resultSetProduct[$i]->id_sanpham;
@@ -155,7 +139,6 @@ require_once("./models/BasicProduct.php");
 					}
 					
 				return $products;
->>>>>>> 581bbcf15ae66043fe9a92d212f39b6694cc7d7c
 		}
 
 		// HAM LAY NHUNG SAN PHAM LIEN QUAN

@@ -18,15 +18,20 @@
 			<div class="col-xl-9 p-0">
 			<table class="table table-bordered">
 		<tbody>
+
 		<!--Dòng sản phẩm 1-->
-		
+		   <?php foreach ($data['CartProduct'] as $product) { ?>
 		  <tr><td class="p-2">
 			  <div class="row m-0">
-				  <div class="col-4"><p><img src="./assets/img/LAPTOP/SP003.png" alt="Sản phẩm 1" class="img-fluid" ></p></div>
+				  <div class="col-4"><p><img src=".<?= $product->mainPicture ?>" alt="" class="img-fluid" ></p></div>
 				  <div class="col-6">
-						  <b class="Pname"><?= $data['MoreInformation']->tensanpham ?> </b><br>
-						<!-- <h class="masp">SKU: YogaSlim7C01CF - Moon White</h> -->
-						<p class="price"><b><?= $data['MoreInformation']->giagiam ?> ₫</b></p>
+				  	<!-- thông tin giỏ hàng -->
+						<b class="Pname"><h4><?= $product->productName ?> </h4></b>
+						<b class="price"><h5><strong style="color:red";>Giá bán: </strong> <?= $product->salePrice ?> ₫ </h5> </b>					
+						<h class="price"  style="color:black;"> <strong>Giá gốc: </strong><strike> <?= $product->price ?></strike> ₫<h>	
+						</p> 
+
+						<!-- Gán cứng -->
 						<p class="mb-1"><b><i class="fa fa-gift" style="font-size:20px"></i> Khuyến Mãi</b><ul class="khuyenmai">
 						<li>Chuột không dây Logitech B175</li>
 						<li>Tặng PMH 500k</li>
@@ -44,6 +49,7 @@
 			  </div>
 			</td>
 		  </tr>
+		  <?php } ?>
 			
 
 	 		</tbody>

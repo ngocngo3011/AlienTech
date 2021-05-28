@@ -1,6 +1,6 @@
 <!--header navigation-->
 <nav class="navbar navbar-expand-md navbar-light" style="margin:0px;padding: 0px;">
-  <a class="navbar-brand" href="/PHPDEMO"><img class="d-none d-md-flex" style="width: 205px;height: 60px;" src="./assets/img/logo/logo1.png"></a>
+  <a class="navbar-brand" href="/Nhom6/"><img class="d-none d-md-flex" style="width: 205px;height: 60px;" src="./assets/img/logo/logo1.png"></a>
   <div class="container">
 
     <!--search khi màn hình nhỏ-->
@@ -82,6 +82,7 @@
             </a>
           </div>
         </li>
+
         <li class="nav-item button mx-3">
           <div class="dropdown show">
             <a class="btn " href="./?controller=Homepage&action=New" role="button" id="dropdownMenuLink">
@@ -107,7 +108,7 @@
           <a class="nav-link" href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
         </li>
         <li class="nav-item mx-3">
-          <a class="nav-link" href="./?controller=Homepage&action=New"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
         </li>
         <li class="nav-item mx-3">
           <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
