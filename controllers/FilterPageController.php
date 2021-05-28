@@ -1,4 +1,5 @@
-<?php
+ <?php
+
 require_once('templates/header.php');
 require_once('core/view.php');
 require_once('models/BasicProduct.php');
@@ -23,6 +24,7 @@ class FilterPageController
 
 		$data = array(
 			'filterProducts' => $filterProducts,
+			'category_name' => "Máy tính xách tay"
 		);
 
 		$this->view->get('FilterPage', $data);
@@ -38,6 +40,7 @@ class FilterPageController
 
 		$data = array(
 			'filterProducts' => $filterProducts,
+			'category_name' => "Máy tính - PC"
 		);
 
 		$this->view->get('FilterPage', $data);
@@ -52,9 +55,15 @@ class FilterPageController
 
 		$data = array(
 			'filterProducts' => $filterProducts,
+			'category_name' => "Phụ kiện"
 		);
 
 		$this->view->get('FilterPage', $data);
 	}
 
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> 581bbcf15ae66043fe9a92d212f39b6694cc7d7c

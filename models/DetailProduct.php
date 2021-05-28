@@ -11,7 +11,7 @@ require_once("./models/BasicProduct.php");
 		public $idthongso; 			
 		public $tenthongso; 		
 		public $giatri; 		
-
+		
 		// HAM GET CHI TIET THONG TIN SAN PHAM
 		public function getDetailProduct($idProduct) {
 			// TODO
@@ -56,6 +56,7 @@ require_once("./models/BasicProduct.php");
 				$resultObject = $stmt->fetchObject();
 				$TenTS = isset($resultObject->tenthongso)?$resultObject->tenthongso:""; 
 				$product->tenthongso = $TenTS;
+<<<<<<< HEAD
 
 				//lay mo ta sp
 				$querymota = "SELECT sp.mota
@@ -68,6 +69,10 @@ require_once("./models/BasicProduct.php");
 				$resultObject = $stmt->fetchObject();
 				$mota = isset($resultObject->mota)?$resultObject->mota:""; 
 				$product->mota = $mota;
+=======
+				$product->idTSCT = $idTSCT;
+				
+>>>>>>> 581bbcf15ae66043fe9a92d212f39b6694cc7d7c
 
 				array_push($products, $product);
 			}
@@ -77,21 +82,95 @@ require_once("./models/BasicProduct.php");
 		
 		public function getMoreInformation($idProduct='SP008') {
 			// TODO
+<<<<<<< HEAD
 
 				// //Lay thông tin cơ bản sản phẩm 
 
 			return $this;
+=======
+			// $products = array();
+			$product = new BasicProduct();
+			//$productId = $resultSetProduct[$i]->id_sanpham;
+
+
+			$querymota = "SELECT *
+						FROM tbl_sanpham 
+						WHERE id_sanpham = '$idProduct' ";
+					
+					$stmt = $this->db->prepare($querymota);
+					$stmt->execute();
+					$resultObject = $stmt->fetchObject();
+					$mota = isset($resultObject->mota)?$resultObject->mota:""; 
+					$product->mota = $mota;
+
+					$tensanpham = isset($resultObject->tensanpham)?$resultObject->tensanpham:"";
+					$product->tensanpham = $tensanpham;
+
+					$giagiam = number_format(isset($resultObject->giagiam)?$resultObject->giagiam:"");
+					$product->giagiam = $giagiam;
+				
+			$queryRating = "SELECT COALESCE(ROUND(AVG(diem))) diemtrungbinh, COUNT(diem) luotdanhgia 
+							FROM tbl_danhgia 
+							WHERE id_sanpham = '$idProduct'";
+
+				$stmt = $this->db->prepare($queryRating);
+				$stmt->execute();
+				$resultObject = $stmt->fetchObject();
+				$product->rateNumbers = $resultObject->luotdanhgia;
+				$product->starNumbers = $resultObject->diemtrungbinh;
+
+					
+			$querytenthuonghieu = "SELECT th.tenthuonghieu
+							FROM `tbl_sanpham` sp
+							INNER JOIN tbl_thuonghieu th ON th.id_thuonghieu = sp.id_thuonghieu
+							WHERE sp.id_sanpham = '$idProduct'";
+
+				$stmt = $this->db->prepare($querytenthuonghieu);
+				$stmt->execute();
+				$resultObject = $stmt->fetchObject();
+				$tenthuonghieu = isset($resultObject->tenthuonghieu)?$resultObject->tenthuonghieu:""; 
+				$product->tenthuonghieu = $tenthuonghieu;
+
+			return $product;
 		}
 
-		public function getRelativeProducts($idProduct='SP008') {
+
+		public function getPicture($idProduct) {
 			// TODO
-			
-			return $this;
+
+			$products= array();
+						
+			$queryPicture = "SELECT hinhanh_url 
+							FROM tbl_hinhanh 
+							WHERE id_sanpham='".$idProduct."' LIMIT 5";
+					
+					$stmt = $this->db->prepare($queryPicture);
+					$stmt->execute();
+					while ( $resultObject = $stmt->fetchObject()) 
+					{
+						$product = new BasicProduct();
+						$picture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:""; 
+						$product->picture = $picture;
+						array_push($products,$product);
+					}
+					
+				return $products;
+>>>>>>> 581bbcf15ae66043fe9a92d212f39b6694cc7d7c
 		}
 
+		// HAM LAY NHUNG SAN PHAM LIEN QUAN
+		public function getRelatedProducts($limit, $idProduct) {
+			// Tim loai san pham va thuong hieu cua san pham co id 
+			$queryProduct = "SELECT * 
+						FROM tbl_sanpham 
+						WHERE id_sanpham = '$idProduct' ";
+			$stmt = $this->db->prepare($queryProduct);
+			$stmt->execute();
+			$resultObjectProduct = $stmt->fetchObject();
 
-				// HAM LAY NHUNG SAN PHAM DAI DIEN THEO DANH MUC[LAPTOP, PC, PHUKIEN]
-		public function getProducts($limit, $category='LSP001', $brandId="") {
+			$category= $resultObjectProduct->id_loaisanpham; 
+			$brandId=  $resultObjectProduct->id_thuonghieu; 
+
 			$query = "SELECT * 
 						FROM tbl_sanpham 
 						WHERE id_loaisanpham = '$category' ";

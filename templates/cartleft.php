@@ -22,11 +22,11 @@
 		
 		  <tr><td class="p-2">
 			  <div class="row m-0">
-				  <div class="col-4"><p><img src="./assets/img/Hình/Lenovo/Yoga/Yoga slim 7 carbon/yslim7c-01.jpg" alt="Sản phẩm 1" class="img-fluid" ></p></div>
+				  <div class="col-4"><p><img src="./assets/img/LAPTOP/SP003.png" alt="Sản phẩm 1" class="img-fluid" ></p></div>
 				  <div class="col-6">
-						  <b class="Pname">Lenovo Yoga Slim 7 Carbon </b><br>
-						<h class="masp">SKU: YogaSlim7C01CF - Moon White</h>
-						<p class="price"><b>26.490.000 đ</b></p>
+						  <b class="Pname"><?= $data['MoreInformation']->tensanpham ?> </b><br>
+						<!-- <h class="masp">SKU: YogaSlim7C01CF - Moon White</h> -->
+						<p class="price"><b><?= $data['MoreInformation']->giagiam ?> ₫</b></p>
 						<p class="mb-1"><b><i class="fa fa-gift" style="font-size:20px"></i> Khuyến Mãi</b><ul class="khuyenmai">
 						<li>Chuột không dây Logitech B175</li>
 						<li>Tặng PMH 500k</li>

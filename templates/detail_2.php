@@ -46,7 +46,7 @@
 			  </div>
 	    </div>
 	  		  
-		  	<!-- Nội dung tab 3: Đánh giá--> 
+<!-- Nội dung tab 3: Đánh giá--> 
 		  	<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 			  <br>
 			  <div id="box_comment" class="box-comment">
@@ -74,12 +74,12 @@
 							<span> <lable> Số điện thoại của bạn </lable></span>
 							<input name="tel" class="tel" id="tel" type="text" value size="35" placeholder="Số điện thoại của bạn là (*)"/>
 						</p>
-						<button type="submit" onclick="myFunction()" value="Submit" style="font:bold; padding:10px; border-radius: 10px; background:orange;"> Gửi Bình Luận </button>
+						<button type="submit" onclick="myFunctiondau()" value="Submit" style="font:bold; padding:10px; border-radius: 10px; background:orange;"> Gửi Bình Luận </button>
 					</form>
 					
 							  	
 				  	<script>
-						function myFunction() {
+						function myFunctiondau() {
 						alert('Đã gửi bình luận thành công');
 						}
 				  </script>
@@ -94,7 +94,6 @@
 				  	
 			  </div>
 		</div>						
- 	</div>
-
+</div>
 	<hr>
   	<br>

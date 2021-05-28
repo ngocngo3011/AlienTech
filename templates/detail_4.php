@@ -9,10 +9,10 @@
     </div>
     <!--V.2: Product List--> 
     <div class="row padding" id="di">
-        <?php foreach ($data['relatedLaptopProducts'] as $product) { ?>
+        <?php foreach ($data['relatedProducts'] as $product) { ?>
 
                               <div class="col-md-3 col-6 tovar_wrapper p-0" data-appear-top-offset='-100' data-animated='fadeInUp'>
-                                  <div class="card  tovar_item padbot40 filter ">
+                                  <div class="card  tovar_item padbot40 filter " style="background-color: white">
                                       <div class="tovar_img">
                                           <div class="tovar_img_wrapper">
                                               <label class="baohanh badge-warning" style="color: black; margin:10px; font-size: 12px;">Trả góp 0%</label>
@@ -47,10 +47,21 @@
                           <?php } ?>
 </div>
     <!-- V.3: Button xem thêm--> 
+    <?php if (count($data['allRelatedProducts']) > 4) { ?>
+
     <br>
+        <div class="row justify-content-center" id="duy" style="background-color: white">           
+            <button onclick="Function()"id="duy" class="btn btn-outline-warning" style="color:black;">Xem thêm </button>
+        </div> 
+    <br>
+<<<<<<< HEAD
     <div class="row justify-content-center" id="duy" style="background-color: white">           
         <button onclick="Function()"id="duy" class="btn btn-outline-warning" style="color:black;">Xem thêm </button>
     </div> 
+=======
+
+    <?php } ?>
+>>>>>>> 581bbcf15ae66043fe9a92d212f39b6694cc7d7c
     <!--Nút xem thêm = js--> 
 <!--Nút xem thêm = js--> 
    <script type="text/javascript">
@@ -71,11 +82,11 @@
     <div id="ProductList" style=" display: none;">
        <!-- ProductList1 xem thêm --> 
   <div class="row padding">
-        <?php foreach ($data['allrelatedLaptopProducts'] as $key=>$product) { 
+        <?php foreach ($data['allRelatedProducts'] as $key=>$product) { 
             ?>
 
                               <div class="col-md-3 col-6 tovar_wrapper p-0" data-appear-top-offset='-100' data-animated='fadeInUp'>
-                                  <div class="card  tovar_item padbot40 filter ">
+                                  <div class="card  tovar_item padbot40 filter "style="background-color: white">
                                       <div class="tovar_img">
                                           <div class="tovar_img_wrapper">
                                               <label class="baohanh badge-warning" style="color: black; margin:10px; font-size: 12px;">Trả góp 0%</label>
@@ -114,4 +125,3 @@
  </div>
 </div>
 </div></div></div></div>
-
