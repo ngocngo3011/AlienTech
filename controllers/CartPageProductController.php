@@ -37,7 +37,7 @@ class CartPageProductController
 			$products['sluong']= 1;
 			$_SESSION['cart'][$idProduct]=$products;
 		} else {
-			$products['sluong']=$_SECCSION['cart'][$idProduct]['sluong'] + 1;
+			$products['sluong']=$_SESSION['cart'][$idProduct]['sluong'] + 1;
 			$_SESSION['cart'][$idProduct]=$products;
 		}
 
