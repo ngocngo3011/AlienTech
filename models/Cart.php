@@ -6,14 +6,15 @@ require_once("./core/Model.php");
  
 
 
-		public $id;
+		public $idProduct;
 		public $productName; 	// TEN SP
 		public $price; 			// GIA 
 		public $salePrice; 		// GIA SALE
 		public $categoryType; 	// LOAI SAN PHAM [LAPTOP, PC, PK]
 		public $mainPicture; 	// HINH ANH CHINH SP
 		public $brandId;
-		public $sluong;		
+		public $quantity = 0; 		// SO LUONG TRONG CART
+	
 		
 
 
@@ -25,35 +26,30 @@ require_once("./core/Model.php");
 
 			$stmt = $this->db->prepare($querycart);
 			$stmt->execute();
-			$resultSetProduct = $stmt->fetchAll(PDO::FETCH_CLASS);
+			$resultSetProduct = $stmt->fetchObject();
 
-			$products = array();
-			for($i=0; $i<count($resultSetProduct);$i++){
-				$product = new ProductCart();
-				$product->id = $resultSetProduct[$i]->id_sanpham;
-				$product->productName = $resultSetProduct[$i]->tensanpham;
-				$product->price = number_format($resultSetProduct[$i]->giaban);
-				$product->categoryType = $resultSetProduct[$i]->id_loaisanpham;
-				$product->salePrice = number_format($resultSetProduct[$i]->giagiam);
-				$product->brandId = $resultSetProduct[$i]->id_thuonghieu;
+			$product = new ProductCart();
+			$productId = $resultSetProduct->id_sanpham;
+			$product->id = $idProduct;
+			$product->productName = $resultSetProduct->tensanpham;
+			$product->price = $resultSetProduct->giaban;
+				
+			$product->salePrice = $resultSetProduct->giagiam;
+			$product->brandId = $resultSetProduct->id_thuonghieu;
 				
 				//Lay hinh anh
-				$productId = $resultSetProduct[$i]->id_sanpham;
-				$queryPicture = "SELECT *
+			$queryPicture = "SELECT *
 							FROM tbl_hinhanh ha 
 							WHERE id_sanpham = '$productId' 
 								and ha.hinh_anh_chinh = 1";
 
-				$stmt = $this->db->prepare($queryPicture);
-				$stmt->execute();
-				$resultObject = $stmt->fetchObject();
-				$mainPicture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:"/assets/img/Missing_Image.jpg"; 
-				$product->mainPicture = $mainPicture;
+			$stmt = $this->db->prepare($queryPicture);
+			$stmt->execute();
+			$resultObject = $stmt->fetchObject();
+			$mainPicture = isset($resultObject->hinhanh_url)?$resultObject->hinhanh_url:"/assets/img/Missing_Image.jpg"; 
+			$product->mainPicture = $mainPicture;
 
-				array_push($products, $product);
-			}
-
-			return $products;
+			return $product;
 		}
 	}
 	

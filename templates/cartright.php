@@ -21,7 +21,7 @@
 					<td  class="p-2">
 					<div class="row m-0">
 					<div class="col-5"><b>Tạm tính:</b></div>
-					<div class="col-7"><p class="text-right">123456789 đ</p></div>
+					<div class="col-7"><p class="text-right"><?= number_format($tamtinh) ?> đ</p></div>
 					</div>
 					</td>
 				</tr>
@@ -29,7 +29,7 @@
 					<td  class="p-2">
 					<div class="row m-0">
 					<div class="col-5"><b>Giảm giá:</b></div>
-					<div class="col-7"><p class="text-right">123456789 đ</p></div>
+					<div class="col-7"><p class="text-right"><?= number_format($giamgia) ?> đ</p></div>
 					</div>
 					</td>
 				</tr>
@@ -37,7 +37,7 @@
 					<td  class="p-2">
 					<div class="row m-0">
 					<div class="col-5"><b>Tổng tiền:</b></div>
-					<div class="col-7"><p class="text-right text-danger"><b>123456789 đ</b></p></div>
+					<div class="col-7"><p class="text-right text-danger"><b><?= number_format($tongtien) ?> đ</b></p></div>
 					</div>
 					</td>
 				</tr>
@@ -96,14 +96,14 @@
 <!--			Button đặt hàng		-->
 				<table class="table">
 				<tr><td class="text-center">
-						<button class="btn btn-primary btn-block" id="paymentafter"><b>ĐẶT HÀNG THANH TOÁN SAU</b></button>
+						<a href="./?controller=CartPageProduct&action=deleteallProduct"><button class="btn btn-primary btn-block" id="paymentafter"><b>ĐẶT HÀNG THANH TOÁN SAU</b></button></a>
 				</td></tr>
 				<tr><td> 
 					<input type="radio" id="payonl1" name="ship" value="store">
 							<label for="payonl1"><img src="./assets/img/Logo/ZaloPay_Logo.png" width="50"> Cổng thanh toán ZaloPay</label><br>
 					<input type="radio" id="payonl2" name="ship" value="store">
 							<label for="payonl2"><img src="./assets/img/Logo/Logo-VNPAYQR-update.png" width="50"> Cổng thanh toán VNPay</label>
-						<button class="btn btn-warning btn-block"><b>THANH TOÁN ONLINE</b></button>
+						<a href="./?controller=CartPageProduct&action=deleteallProduct"><button class="btn btn-warning btn-block" id="paymentonline"><b>THANH TOÁN ONLINE</b></button></a>
 					<br>
 					<input type="checkbox" id="dk" name="dk" value="dongydk">
 							<label for="dk">Tôi đồng ý với các <a href="#">điều khoản</a></label>

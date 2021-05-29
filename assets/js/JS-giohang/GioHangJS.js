@@ -23,12 +23,18 @@ $('input.input-qty').each(function() {
 
 function paymentafterjs(){
 	document.getElementById("paymentafter").addEventListener("click", function() {
-  alert("sbuvgikjbfdu");
+  alert("Đặt hàng thành công");
 });
 }    
+function paymentonlinejs(){
+  document.getElementById("paymentonline").addEventListener("click", function() {
+  alert("AHIHI cũng đặt hàng thành công nhá ^^!");
+});
+} 
 
 window.onload=function(){
 	buttonsadded();
 	paymentafterjs();
+  paymentonlinejs();
 }
 

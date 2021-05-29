@@ -89,13 +89,13 @@
 				
 				<div class="action" align="center">
 				
-				 <span class="action" align="center" > 
-					 <a  href="./?controller=CartPageProduct&action=index&idProduct=<?= $idProduct ?>">            
+				
+					 <a  href="?controller=CartPageProduct&action=cart&idProduct=<?=$product->id?> ">            
 					 <button class="add-to-cart"  type="button" onclick="addcart()">
 					 <strong> Thêm vào giỏ hàng </strong>
 					 </button> 
 					 </a> 	    
-				</span>
+				
 				</div>
 		</div>
    

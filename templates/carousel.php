@@ -38,7 +38,7 @@
                                                 <?php } ?>
                                             </span>
                                         </div>
-                                        <a href="?controller=CartPageProduct&action=index&idProduct=<?=$product->id?>"> <!---link tới CartPageProduct-->
+                                        <a href="?controller=CartPageProduct&action=cart&idProduct=<?=$product->id?>"> <!---link tới CartPageProduct-->
                                             <button class="btn btn-blog bg-warning" type="button">MUA NGAY</button>
                                         </a>
                                         <span style="font-weight: bold; color: red;"> <?= $product->salePrice ?> ₫</span>

@@ -1,4 +1,5 @@
 <link href="./assets/css/GioHang_CSS.css" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/GioHang_CSS.css">
 
 <!-- body trang giỏ hàng	-->
 	<div class="mt-2 GioHang">
@@ -16,19 +17,29 @@
 		<div class="row">
 	<!--Cột hiển thị sản phẩm trong giỏ hàng-->
 			<div class="col-xl-9 p-0">
-			<table class="table table-bordered">
+	<form action="./?controller=CartPageProduct&action=updatecart" method="$_POST">			
+	<table class="table table-bordered">
 		<tbody>
 
 		<!--Dòng sản phẩm 1-->
-		   <?php foreach ($data['CartProduct'] as $product) { ?>
+		
+		   <?php 
+			if(isset($data['products'])) { 
+		   		foreach ($data['products'] as $product) { ?> 	   	
 		  <tr><td class="p-2">
 			  <div class="row m-0">
-				  <div class="col-4"><p><img src=".<?= $product->mainPicture ?>" alt="" class="img-fluid" ></p></div>
+				  <div class="col-4"><p><img src=".<?= $product['mainPicture'] ?>" alt="" class="img-fluid" ></p></div>
 				  <div class="col-6">
 				  	<!-- thông tin giỏ hàng -->
-						<b class="Pname"><h4><?= $product->productName ?> </h4></b>
-						<b class="price"><h5><strong style="color:red";>Giá bán: </strong> <?= $product->salePrice ?> ₫ </h5> </b>					
-						<h class="price"  style="color:black;"> <strong>Giá gốc: </strong><strike> <?= $product->price ?></strike> ₫<h>	
+						<b class="Pname"><h4> <?= $product['productName']  ?></h4></b>
+						<b class="price"><h5><strong style="color:red";>Giá bán: <?= number_format($product['salePrice']) ?></strong>  ₫ 
+						<p class="old-price" style="text-decoration: line-through;display: inline; font-size: 13px; color: gray;">
+                            <?= number_format($product['price']) ?> ₫
+						</p>
+						</h5> </b>					
+						
+
+						<!-- <h class="price"  style="color:black;"> <strong>Giá gốc: </strong><strike> </strike> ₫<h>	 -->
 						</p> 
 
 						<!-- Gán cứng -->
@@ -37,21 +48,27 @@
 						<li>Tặng PMH 500k</li>
 						<li>Mua Office Home & Student 2019 chỉ còn 1,990,000</li>
 						</ul></p>	
-			  	</div>
+		  	</div>
+
 				  <div class="col-xl-2">
+				  	<!-- Nút tăng giảm sản phẩm -->
 					<div class="buttons_added my-2">
-					  <input class="minus is-form" type="button" value="-">
-					  <input aria-label="quantity" class="input-qty" max="999999999" min="1" name="" type="number" value="1">
-					  <input class="plus is-form" type="button" value="+">
-					</div>	  
-				<br>
-				<button class="btn btn-danger btn-sm btn-block"><i class="fa fa-trash-o"></i> Xóa </button></div>
+					 <!-- <input class="minus is-form" type="button" value="-">  -->
+					 <input aria-label="quantity" class="input-qty" min="1" name="quantity[<?= $product['productId']?>]" type="number" value="<?= $product['quantity'] ?>">
+					  <!-- <input class="plus is-form" type="button" value="+"> -->
+					</div>	
+					
+				<p>
+				<a href="./?controller=CartPageProduct&action=deleteProduct&idProduct=<?=$product['productId']?>"> Xóa </a></p>
+				</div>
 			  </div>
 			</td>
-		  </tr>
-		  <?php } ?>
-			
-
+		  </tr> <?php }} ?>
 	 		</tbody>
 		</table>
+		</form>
+		<p align="right" class="mr-2">
+		 <a href="./?controller=CartPageProduct&action=updatecart"> <button class="btn btn-primary">Cập nhập giỏ hàng</button> </a>
+		</p> 
+
 		</div>
