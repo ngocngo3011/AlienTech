@@ -106,7 +106,6 @@ class CartPageProductController
 	}
 
 	public function deleteallProduct(){
-		$idProduct = $_GET["idProduct"];
 		
 		unset($_SESSION['cart']);
 

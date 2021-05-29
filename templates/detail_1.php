@@ -90,7 +90,7 @@
 				<div class="action" align="center">
 				
 				
-					 <a  href="?controller=CartPageProduct&action=cart&idProduct=<?=$product->id?> ">            
+					 <a  href="?controller=CartPageProduct&action=cart&idProduct=<?=$product-> ?> ">            
 					 <button class="add-to-cart"  type="button" onclick="addcart()">
 					 <strong> Thêm vào giỏ hàng </strong>
 					 </button> 
