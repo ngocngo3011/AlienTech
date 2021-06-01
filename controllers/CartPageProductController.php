@@ -70,30 +70,10 @@ class CartPageProductController
 		}
 
 
-		// echo '<pre>';
-		// print_r($productInfo);
 
 		header('Location:?controller=CartPageProduct');
 		die();
-		// $this->view->get('CartPage', $data);	
-
-			 // public function update(){
-	 // 	foreach($_POST['sluong'] as $idProduct => $sluong){
-	 // 		if($sluong <= 0 || !is_numeric($sluong)){
-		// 		continue;
-		// 	}
-	 // 		if($sluong==0){
-	 // 			unset($_SESSION['cart'][$idProduct]);
-	 // 		}else{
-	 // 			$_SESSION['cart'][$idProduct]['sluong'] = $sluong;
-	 // 		}
-	 // 	}
-	 // }
-	 // public function delete(){
-	 // 	$idProduct = $_GET["idProduct"];
-	 // 	unset($_SESSION['cart'][$idProduct]);
-	 // 	$this->view->get('CartPage', $data);
-	 // }
+		
 
 	}
 

@@ -147,7 +147,7 @@
                         </div>
                         <div class="tovar_item_btns">
                             <div class="open-project-link"><a class="open-project tovar_view" href="./?controller=DetailPage&action=index&idProduct=<?=$product->id?>">Chi tiết</a></div>
-                            <a class="add_bag" href="./?controller=CartPageProduct&action=index&idProduct=<?=$product->id?>"><i class="fa fa-shopping-cart"></i></a>
+                            <a class="add_bag" href="./?controller=CartPageProduct&action=cart&idProduct=<?=$product->id?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -208,7 +208,7 @@
                         </div>
                         <div class="tovar_item_btns">
                             <div class="open-project-link"><a class="open-project tovar_view" href="./?controller=DetailPage&action=index&idProduct=<?=$product->id?>">Chi tiết</a></div>
-                            <a class="add_bag" href="./?controller=CartPageProduct&action=index&idProduct=<?=$product->id?>"><i class="fa fa-shopping-cart"></i></a>
+                            <a class="add_bag" href="./?controller=CartPageProduct&action=cart&idProduct=<?=$product->id?>"><i class="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>

@@ -17,7 +17,7 @@
 		<div class="row">
 	<!--Cột hiển thị sản phẩm trong giỏ hàng-->
 			<div class="col-xl-9 p-0">
-	<form action="./?controller=CartPageProduct&action=updatecart" method="$_POST">			
+	<!-- <form action="./?controller=CartPageProduct&action=updatecart" method="$_POST">			 -->
 	<table class="table table-bordered">
 		<tbody>
 
@@ -52,23 +52,23 @@
 
 				  <div class="col-xl-2">
 				  	<!-- Nút tăng giảm sản phẩm -->
-					<div class="buttons_added my-2">
+					<div class="buttons_added input-group my-2">
 					 <!-- <input class="minus is-form" type="button" value="-">  -->
-					 <input aria-label="quantity" class="input-qty" min="1" name="quantity[<?= $product['productId']?>]" type="number" value="<?= $product['quantity'] ?>">
+					 <input aria-label="quantity" class="input-qty form-control dislay-fluid" min="1" name="quantity[<?= $product['productId']?>]" type="number" value="<?= $product['quantity'] ?>">
 					  <!-- <input class="plus is-form" type="button" value="+"> -->
 					</div>	
 					
 				<p>
-				<a href="./?controller=CartPageProduct&action=deleteProduct&idProduct=<?=$product['productId']?>"> Xóa </a></p>
+				<a href="./?controller=CartPageProduct&action=deleteProduct&idProduct=<?=$product['productId']?>"> <button class="btn btn-danger btn-block"> Xóa </button></a></p>
 				</div>
 			  </div>
 			</td>
 		  </tr> <?php }} ?>
 	 		</tbody>
 		</table>
-		</form>
-		<p align="right" class="mr-2">
+		<!-- </form> -->
+		<!-- <p align="right" class="mr-2">
 		 <a href="./?controller=CartPageProduct&action=updatecart"> <button class="btn btn-primary">Cập nhập giỏ hàng</button> </a>
-		</p> 
+		</p> --> 
 
 		</div>
